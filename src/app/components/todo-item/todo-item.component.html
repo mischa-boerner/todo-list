@@ -1,0 +1,4 @@
+<div>
+  <input type="checkbox" [(ngModel)]="isCompleted" (change)="onCheckboxChange()">
+  <a [routerLink]="['detail', id]">{{ taskTitle }}</a>
+</div>
