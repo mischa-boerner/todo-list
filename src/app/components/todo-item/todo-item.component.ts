@@ -17,10 +17,15 @@ export class TodoItemComponent {
   @Input() taskTitle!: string;
   @Input() isCompleted = false;
   @Output() isCompletedChange = new EventEmitter<boolean>();
+  taskDescription!: string;
 
   constructor(private router: Router) {}
 
   onCheckboxChange() {
     this.isCompletedChange.emit(this.isCompleted);
+  }
+
+  navigateToDetail() {
+    this.router.navigate(['/todo', this.id]);
   }
 }

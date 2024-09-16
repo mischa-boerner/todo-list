@@ -1,2 +1,8 @@
-<h2>Todo Detail</h2>
-<p>Todo ID: {{ todoId }}</p>
+<div>
+  <h2>Todo Detail View</h2>
+  <p>Title </p>
+  <input [(ngModel)]="todoTitle" type="text" placeholder="Enter Task Title">
+  <p>Description </p>
+  <textarea [(ngModel)]="todoDescription" type="text" placeholder="Enter Task Description"></textarea>
+  <button (click)="saveChanges()">Save Changes</button>
+</div>

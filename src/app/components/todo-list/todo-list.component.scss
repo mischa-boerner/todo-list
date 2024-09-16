@@ -1,0 +1,36 @@
+* {
+  margin-right: 5px;
+}
+
+h1 {
+  font-family: Arial, serif;
+  text-align: center;
+}
+
+input[type="text"], button{
+  border-radius: 20px;
+  border-style: solid;
+  border-color: lightgrey;
+  padding: 10px;
+  background-color: whitesmoke;
+  transition: 0.15s;
+}
+
+button:hover {
+  color: white;
+  cursor: pointer;
+}
+
+#add:hover {
+  background-color: dodgerblue;
+  border-color: dodgerblue;
+}
+
+#clear:hover {
+  background-color: red;
+  border-color: red;
+}
+
+input[type="text"]:hover {
+  background-color: lightgrey;
+}

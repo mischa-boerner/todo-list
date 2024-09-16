@@ -1,4 +1,4 @@
 <div>
   <input type="checkbox" [(ngModel)]="isCompleted" (change)="onCheckboxChange()">
-  <a [routerLink]="['detail', id]">{{ taskTitle }}</a>
+  <span (click)="navigateToDetail()">{{ taskTitle }}</span>
 </div>

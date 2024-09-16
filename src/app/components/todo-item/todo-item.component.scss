@@ -1,8 +1,19 @@
-.task-container {
-  display: flex;
-  align-items: center;
+input[type="checkbox"] {
+  margin-right: 10px;
+  accent-color: dodgerblue;
 }
 
-.task-container input[type="checkbox"] {
-  margin-right: 15px;
+span {
+  font-family: "Arial", serif;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+span:hover {
+  color: dodgerblue;
+  text-decoration: underline;
+}
+
+div {
+  margin-bottom: 10px;
 }
