@@ -1,46 +1,10 @@
 {
   "todos": [
     {
-      "id": "39b0fe4b-61cd-4935-8b66-1212167e3341",
-      "taskTitle": "Rasenmähen",
-      "taskDescription": "Den Rasen im Garten mähen",
-      "isCompleted": false
-    },
-    {
-      "id": "42259b43-f019-488a-8ac7-0bca7ca4547a",
-      "taskTitle": "Hausaufgaben",
-      "taskDescription": "Mathe- und Englischhausaufgaben erledigen",
-      "isCompleted": true
-    },
-    {
       "id": "2e99d455-4b91-4312-82b9-6519a5fd8c74",
       "taskTitle": "Kochen",
       "taskDescription": "Abendessen für die Familie kochen",
-      "isCompleted": true
-    },
-    {
-      "id": "dc26a120-9bf3-4b47-9799-6aecf2e12a80",
-      "taskTitle": "Friseurtermin",
-      "taskDescription": "Zum Friseur gehen für einen Haarschnitt",
-      "isCompleted": true
-    },
-    {
-      "id": "d1881c3c-4231-44c8-9b98-3fc478c4f053",
-      "taskTitle": "Putzen",
-      "taskDescription": "Wohnzimmer und Küche putzen",
-      "isCompleted": true
-    },
-    {
-      "id": "9d688633-d6cf-42a6-949a-f84bfdbc2331",
-      "taskTitle": "Test",
-      "taskDescription": "Testaufgabe für die Schule vorbereiten",
       "isCompleted": false
-    },
-    {
-      "id": "980258ca-c499-4d3b-a0ad-0fdc64f6cf63",
-      "taskTitle": "Aufräumen",
-      "taskDescription": "Schlafzimmer und Arbeitszimmer aufräumen",
-      "isCompleted": true
     },
     {
       "id": "c6dbf4fa-0617-423d-a447-c806f3f0f9f3",
@@ -49,10 +13,10 @@
       "isCompleted": false
     },
     {
-      "id": "52e98bfa-6c6e-4151-bac4-134c5a397fd1",
-      "taskTitle": "Arbeiten",
-      "taskDescription": "Bericht für die Arbeit fertigstellen",
-      "isCompleted": true
+      "id": "81459ba1-665c-4e6b-a524-d4bf4e0f7a56",
+      "taskTitle": "Neue Aufgabe",
+      "taskDescription": "Scroll\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntest",
+      "isCompleted": false
     }
   ]
 }

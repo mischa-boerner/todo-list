@@ -2,7 +2,7 @@
   margin-right: 5px;
 }
 
-div{
+div {
   margin-top: 30px;
 }
 
@@ -14,7 +14,7 @@ h1 {
   text-align: center;
 }
 
-input, button{
+input, button {
   border-radius: 20px;
   border-style: solid;
   border-color: lightgrey;
@@ -23,9 +23,17 @@ input, button{
   transition: 0.15s;
 }
 
+input:hover {
+  background-color: lightgrey;
+}
+
 button:hover {
   color: white;
   cursor: pointer;
+}
+
+input:focus {
+  outline: none;
 }
 
 #task-input {
@@ -41,12 +49,13 @@ button:hover {
   border-color: dodgerblue;
 }
 
-#clear:hover, #clearSearch:hover, #delete-completed:hover{
+#delete-completed:hover {
   background-color: red;
   border-color: red;
 }
 
-input:hover {
+#clear:hover, #clearSearch:hover  {
+  color: black;
   background-color: lightgrey;
 }
 
@@ -77,3 +86,4 @@ input:hover {
 .todo-header {
   margin-top: 0;
 }
+
