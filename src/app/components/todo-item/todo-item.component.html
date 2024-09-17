@@ -1,4 +1,4 @@
 <div>
   <input type="checkbox" [(ngModel)]="todo.isCompleted" (change)="onCheckboxChange()">
-  <span (click)="navigateToDetail(todo.id)">{{ todo.taskTitle }} <span style="color: darkgray">[id:{{todo.id}}]</span></span>
+  <span (click)="navigateToDetail(todo.id)" [innerHTML]="todo | importance"></span>
 </div>

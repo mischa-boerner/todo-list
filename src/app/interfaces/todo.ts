@@ -5,4 +5,5 @@ export interface Todo {
   taskTitle: string;
   isCompleted: boolean;
   taskDescription: string;
+  importance: number;
 }

@@ -33,6 +33,7 @@ export class TodoListComponent implements OnInit{
   completedTodos: Todo[] = [];
   searchTodos: Todo[] = [];
   searchCompletedTodos: Todo[] = [];
+  deletedTodos: Todo[] = [];
   showCompleted = false;
   isSearching = false;
 
@@ -50,7 +51,8 @@ export class TodoListComponent implements OnInit{
         id: uuidv4(),
         taskTitle: taskTitle,
         taskDescription: "",
-        isCompleted: false
+        isCompleted: false,
+        importance: 0
       }
 
       this.saveData(newTodo);
@@ -83,8 +85,9 @@ export class TodoListComponent implements OnInit{
   loadData() {
     this.todoService.getTodos().subscribe(todo => {
       console.log(todo);
-      this.todos = todo.filter(todo => !todo.isCompleted);
-      this.completedTodos = todo.filter(todo => todo.isCompleted)
+      // this.todos = todo.filter(todo => !todo.isCompleted);
+      this.todos = todo.filter(todo => !todo.isCompleted).sort((a, b) => b.importance - a.importance);
+      this.completedTodos = todo.filter(todo => todo.isCompleted).sort((a, b) => b.importance - a.importance);
     });
   }
 
@@ -107,8 +110,17 @@ export class TodoListComponent implements OnInit{
   }
 
   deleteCompletedTodos() {
+    this.deletedTodos = [...this.completedTodos];
     const deleteRequests = this.completedTodos.map(todo => this.todoService.deleteTodo(todo.id));
     forkJoin(deleteRequests).subscribe(() => {
+      this.loadData();
+    });
+  }
+
+  undoDelete() {
+    const restoreRequests = this.deletedTodos.map(todo => this.todoService.postTodos(todo));
+    forkJoin(restoreRequests).subscribe(() => {
+      this.deletedTodos = []; // Clear the deleted tasks after restoring
       this.loadData();
     });
   }

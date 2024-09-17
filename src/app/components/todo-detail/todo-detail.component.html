@@ -4,9 +4,14 @@
   <input [(ngModel)]="todo.taskTitle" type="text" placeholder="Enter Task Title">
   <p>Description </p>
   <textarea [(ngModel)]="todo.taskDescription" type="text" placeholder="Enter Task Description"></textarea>
+  <div class="importance-container">
+    <button class="importance-button" type="button" (click)="changeImportance(0)" [ngClass]="{'highlight': checkImportance(0)}">Normal</button>
+    <button class="importance-button" type="button" (click)="changeImportance(1)" [ngClass]="{'highlight': checkImportance(1)}">Important</button>
+    <button class="importance-button" type="button" (click)="changeImportance(2)" [ngClass]="{'highlight': checkImportance(2)}">Urgent</button>
+  </div>
   <div class="button-container">
-    <button (click)="saveChanges()">Save Changes</button>
-    <button (click)="completeTask()">{{ todo.isCompleted ? 'Undo Complete' : 'Complete Task' }}</button>
+    <button (click)="saveChanges()">Save</button>
+    <button (click)="completeTask()">{{ todo.isCompleted ? 'Uncomplete' : 'Complete' }}</button>
     <button (click)="goBack()">Back</button>
   </div>
 

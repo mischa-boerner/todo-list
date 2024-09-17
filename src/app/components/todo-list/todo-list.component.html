@@ -42,6 +42,7 @@
   @if (showCompleted) {
     <div class="completed-header">
       <hr>
+      <button id="undo-delete" (click)="undoDelete()">Undo Delete</button>
       <button id="delete-completed" (click)="deleteCompletedTodos()">Delete Completed</button>
     </div>
 
@@ -70,5 +71,4 @@
       </div>
     </div>
   }
-
 </div>

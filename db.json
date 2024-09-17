@@ -1,22 +1,88 @@
 {
   "todos": [
     {
-      "id": "2e99d455-4b91-4312-82b9-6519a5fd8c74",
-      "taskTitle": "Kochen",
-      "taskDescription": "Abendessen für die Familie kochen",
-      "isCompleted": false
+      "id": "1e840fe7-6870-46a4-b756-d2271ca41fa0",
+      "taskTitle": "Projektplan erstellen",
+      "taskDescription": "Erstellen Sie einen detaillierten Projektplan für das neue Softwareentwicklungsprojekt.",
+      "isCompleted": false,
+      "importance": 1
     },
     {
-      "id": "c6dbf4fa-0617-423d-a447-c806f3f0f9f3",
-      "taskTitle": "Spazieren gehen",
-      "taskDescription": "Eine Stunde im Park spazieren gehen",
-      "isCompleted": false
+      "id": "2e840fe7-6870-46a4-b756-d2271ca41fa0",
+      "taskTitle": "Team-Meeting organisieren",
+      "taskDescription": "Organisieren Sie ein Team-Meeting, um die Projektanforderungen zu besprechen.",
+      "isCompleted": false,
+      "importance": 1
     },
     {
-      "id": "81459ba1-665c-4e6b-a524-d4bf4e0f7a56",
-      "taskTitle": "Neue Aufgabe",
-      "taskDescription": "Scroll\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntest",
-      "isCompleted": false
+      "id": "3e840fe7-6870-46a4-b756-d2271ca41fa0",
+      "taskTitle": "Kundendokumentation aktualisieren",
+      "taskDescription": "Aktualisieren Sie die Kundendokumentation mit den neuesten Produktinformationen.",
+      "isCompleted": false,
+      "importance": 0
+    },
+    {
+      "id": "5e840fe7-6870-46a4-b756-d2271ca41fa0",
+      "taskTitle": "Fehlerbehebung im System",
+      "taskDescription": "Beheben Sie die gemeldeten Fehler im System.",
+      "isCompleted": true,
+      "importance": 1
+    },
+    {
+      "id": "8e840fe7-6870-46a4-b756-d2271ca41fa0",
+      "taskTitle": "Benutzerhandbuch erstellen",
+      "taskDescription": "Erstellen Sie ein Benutzerhandbuch für die neue Softwareversion.",
+      "isCompleted": false,
+      "importance": 1
+    },
+    {
+      "id": "11e840fe7-6870-46a4-b756-d2271ca41fa0",
+      "taskTitle": "Kundensupport-Anfragen beantworten",
+      "taskDescription": "Beantworten Sie die eingegangenen Kundensupport-Anfragen.",
+      "isCompleted": false,
+      "importance": 1
+    },
+    {
+      "id": "14e840fe7-6870-46a4-b756-d2271ca41fa0",
+      "taskTitle": "Neues Feature implementieren",
+      "taskDescription": "Implementieren Sie das neue Feature gemäß den Spezifikationen.",
+      "isCompleted": false,
+      "importance": 1
+    },
+    {
+      "id": "17e840fe7-6870-46a4-b756-d2271ca41fa0",
+      "taskTitle": "Kundenfeedback analysieren",
+      "taskDescription": "Analysieren Sie das eingegangene Kundenfeedback und erstellen Sie einen Bericht.",
+      "isCompleted": false,
+      "importance": 1
+    },
+    {
+      "id": "33e840fe7-6870-46a4-b756-d2271ca41fa0",
+      "taskTitle": "Sicherheitsrichtlinien aktualisieren",
+      "taskDescription": "Aktualisieren Sie die Sicherheitsrichtlinien des Unternehmens.",
+      "isCompleted": false,
+      "importance": 2
+    },
+    {
+      "id": "43e840fe7-6870-46a4-b756-d2271ca41fa0",
+      "taskTitle": "Sicherheitslücken beheben",
+      "taskDescription": "Beheben Sie die identifizierten Sicherheitslücken im System.",
+      "isCompleted": false,
+      "importance": 2
+    },
+    {
+      "id": "46e840fe7-6870-46a4-b756-d2271ca41fa0",
+      "taskTitle": "Kundensupport-Statistiken analysieren",
+      "taskDescription": "Analysieren Sie die Statistiken des Kundensupports und erstellen Sie einen Bericht.",
+      "isCompleted": true,
+      "importance": 2
+    },
+    {
+      "id": "49e840fe7-6870-46a4-b756-d2271ca41fa0",
+      "taskTitle": "Kundensupport-Feedback einholen",
+      "taskDescription": "Holen Sie Feedback vom Kundensupport-Team ein und analysieren Sie es.",
+      "isCompleted": true,
+      "importance": 0
     }
   ]
 }

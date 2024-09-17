@@ -3,13 +3,16 @@ import {ActivatedRoute} from "@angular/router";
 import {FormsModule} from "@angular/forms";
 import {Todo} from "../../interfaces/todo";
 import {TodoService} from "../../service/todo.service";
-import {Location} from "@angular/common";
+import {Location, NgClass} from "@angular/common";
+import {ImportancePipe} from "../../pipes/importance.pipe";
 
 @Component({
   selector: 'app-todo-detail',
   standalone: true,
   imports: [
-    FormsModule
+    FormsModule,
+    NgClass,
+    ImportancePipe
   ],
   templateUrl: './todo-detail.component.html',
   styleUrl: './todo-detail.component.scss'
@@ -17,9 +20,10 @@ import {Location} from "@angular/common";
 export class TodoDetailComponent implements OnInit{
   todo: Todo = {
     id: '',
-    taskTitle: '',
-    taskDescription: '',
-    isCompleted: false
+    taskTitle: ' ',
+    taskDescription: ' ',
+    isCompleted: false,
+    importance: 0
   };
   todoId!: string;
 
@@ -43,7 +47,8 @@ export class TodoDetailComponent implements OnInit{
       id: this.todo.id,
       taskTitle: this.todo.taskTitle,
       taskDescription: this.todo.taskDescription,
-      isCompleted: this.todo.isCompleted
+      isCompleted: this.todo.isCompleted,
+      importance: this.todo.importance
     };
     this.todoService.putTodos(updatedTodo).subscribe();
   }
@@ -55,5 +60,13 @@ export class TodoDetailComponent implements OnInit{
 
   goBack() {
     this._location.back()
+  }
+
+  changeImportance(n: number) {
+    this.todo.importance = n;
+  }
+
+  checkImportance(n: number) {
+    return n === this.todo.importance;
   }
 }
