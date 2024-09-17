@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {FormsModule} from "@angular/forms";
 import {Router, RouterLink} from "@angular/router";
+import {Todo} from "../../interfaces/todo";
 
 @Component({
   selector: 'app-todo-item',
@@ -13,19 +14,16 @@ import {Router, RouterLink} from "@angular/router";
   styleUrl: './todo-item.component.scss'
 })
 export class TodoItemComponent {
-  @Input() id!: string;
-  @Input() taskTitle!: string;
-  @Input() isCompleted = false;
+  @Input() todo!: Todo;
   @Output() isCompletedChange = new EventEmitter<boolean>();
-  taskDescription!: string;
 
   constructor(private router: Router) {}
 
   onCheckboxChange() {
-    this.isCompletedChange.emit(this.isCompleted);
+    this.isCompletedChange.emit(this.todo.isCompleted);
   }
 
-  navigateToDetail() {
-    this.router.navigate(['/todo', this.id]);
+  navigateToDetail(id: string) {
+    this.router.navigate(['/todo', id]);
   }
 }

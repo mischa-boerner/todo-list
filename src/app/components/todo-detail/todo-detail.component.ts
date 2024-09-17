@@ -1,6 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {FormsModule} from "@angular/forms";
+import {Todo} from "../../interfaces/todo";
+import {TodoService} from "../../service/todo.service";
+import {Location} from "@angular/common";
 
 @Component({
   selector: 'app-todo-detail',
@@ -12,11 +15,15 @@ import {FormsModule} from "@angular/forms";
   styleUrl: './todo-detail.component.scss'
 })
 export class TodoDetailComponent implements OnInit{
+  todo: Todo = {
+    id: '',
+    taskTitle: '',
+    taskDescription: '',
+    isCompleted: false
+  };
   todoId!: string;
-  todoTitle!: string;
-  todoDescription!: string;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private todoService: TodoService, private _location: Location) {}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -26,27 +33,27 @@ export class TodoDetailComponent implements OnInit{
   }
 
   loadTodoItem(id: string) {
-    const savedData = localStorage.getItem('todoItems');
-    if (savedData) {
-      const todoItems = JSON.parse(savedData);
-      const todoItem = todoItems.find((item: {id: string}) => item.id === id);
-      if (todoItem) {
-        this.todoTitle = todoItem.taskTitle;
-        this.todoDescription = todoItem.taskDescription;
-      }
-    }
+    this.todoService.getTodoById(id).subscribe(todoItem => {
+      this.todo = todoItem;
+    });
   }
 
   saveChanges() {
-    const savedData = localStorage.getItem('todoItems');
-    if (savedData) {
-      const todoItems = JSON.parse(savedData);
-      const todoItem = todoItems.find((item: {id: string}) => item.id === this.todoId);
-      if (todoItem) {
-        todoItem.taskTitle = this.todoTitle;
-        todoItem.taskDescription = this.todoDescription;
-        localStorage.setItem('todoItems', JSON.stringify(todoItems));
-      }
-    }
+    const updatedTodo: Todo = {
+      id: this.todo.id,
+      taskTitle: this.todo.taskTitle,
+      taskDescription: this.todo.taskDescription,
+      isCompleted: this.todo.isCompleted
+    };
+    this.todoService.putTodos(updatedTodo).subscribe();
+  }
+
+  completeTask() {
+    this.todo.isCompleted = !this.todo.isCompleted;
+    this.saveChanges();
+  }
+
+  goBack() {
+    this._location.back()
   }
 }

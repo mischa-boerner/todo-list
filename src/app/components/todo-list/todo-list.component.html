@@ -1,5 +1,74 @@
-<h1>To Do List</h1>
-<input #taskInput type="text" placeholder="Enter Task Title">
-<button id="add" type="button" (click)="addTodoItem()">Add Task</button>
-<button id="clear" type="button" (click)="clearCompletedTasks()">Clear Completed Tasks</button>
-<ul #todoListContainer></ul>
+<div class="todo-container">
+
+  <div class="todo-header">
+    <h1>To-Do</h1>
+
+    <div id="searchDiv">
+      <input #searchInput id="searchInput" type="search" placeholder="Search for existing Tasks">
+      @if (!isSearching) {
+        <button id="searchButton" type="button" (click)="search(searchInput.value)">Search</button>
+      } @else {
+        <button id="clearSearch" type="button" (click)="search('')">Clear</button>
+      }
+    </div>
+
+    <input #taskInput id="task-input" type="text" placeholder="Enter Task Title">
+    <button id="add" type="button" (click)="addTodoItem()">Add Task</button>
+    <button id="clear" type="button" (click)="showCompletedTasks()">{{ showCompleted ? "Hide" : "Show" }} Completed</button><br>
+  </div>
+
+  <div id="todo-div">
+    @if(todos.length === 0) {
+      <p>Nothing to do.</p>
+    }
+
+    @if(!isSearching) {
+      @for (t of todos; track t.id) {
+        <app-todo-item [todo]="t" (isCompletedChange)="updateTodoItem(t, $event)"></app-todo-item>
+      }
+    }
+    @else {
+      @if (searchTodos.length === 0) {
+        <p>No Tasks matching search.</p>
+       }
+      @else {
+        @for (t of searchTodos; track t.id) {
+          <app-todo-item [todo]="t" (isCompletedChange)="updateTodoItem(t, $event)"></app-todo-item>
+        }
+      }
+    }
+  </div>
+
+  @if (showCompleted) {
+    <div class="completed-header">
+      <hr>
+      <button id="delete-completed" (click)="deleteCompletedTodos()">Delete Completed</button>
+    </div>
+
+    <div id="completedTodoDiv">
+      <div>
+        @if (completedTodos.length === 0) {
+          <p>No completed Tasks.</p>
+        }
+
+        @if(!isSearching) {
+          @for (t of completedTodos; track t.id) {
+            <app-todo-item [todo]="t" (isCompletedChange)="updateTodoItem(t, $event)"></app-todo-item>
+          }
+        }
+        @else {
+          @if (searchCompletedTodos.length === 0) {
+            <p>No completed Tasks matching search.</p>
+          }
+          @else {
+            @for (t of searchCompletedTodos; track  t.id) {
+              <app-todo-item [todo]="t" (isCompletedChange)="updateTodoItem(t, $event)"></app-todo-item>
+            }
+          }
+        }
+
+      </div>
+    </div>
+  }
+
+</div>

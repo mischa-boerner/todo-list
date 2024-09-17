@@ -1,8 +1,13 @@
 <div>
-  <h2>Todo Detail View</h2>
+  <h1>Todo Detail View</h1>
   <p>Title </p>
-  <input [(ngModel)]="todoTitle" type="text" placeholder="Enter Task Title">
+  <input [(ngModel)]="todo.taskTitle" type="text" placeholder="Enter Task Title">
   <p>Description </p>
-  <textarea [(ngModel)]="todoDescription" type="text" placeholder="Enter Task Description"></textarea>
-  <button (click)="saveChanges()">Save Changes</button>
+  <textarea [(ngModel)]="todo.taskDescription" type="text" placeholder="Enter Task Description"></textarea>
+  <div class="button-container">
+    <button (click)="saveChanges()">Save Changes</button>
+    <button (click)="completeTask()">{{ todo.isCompleted ? 'Undo Complete' : 'Complete Task' }}</button>
+    <button (click)="goBack()">Back</button>
+  </div>
+
 </div>
