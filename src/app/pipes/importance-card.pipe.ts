@@ -1,6 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import {Todo} from "../interfaces/todo";
-import {DomSanitizer, SafeHtml} from "@angular/platform-browser";
 
 @Pipe({
   name: 'importanceCard',
