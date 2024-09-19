@@ -28,6 +28,32 @@ export class CardSeperatorComponent {
     return this.todos.filter(todo => todo.isSelected).length != 0;
   }
 
+  getSelectedLength(): number {
+    return this.todos.filter(todo => todo.isSelected).length;
+  }
+
+  selectAll() {
+    const selectRequests = this.todos.filter(todo => !todo.isSelected).map(todo => {
+      todo.isSelected = true;
+      return this.todoService.putTodos(todo);
+    });
+
+    forkJoin(selectRequests).subscribe(() => {
+      this.update.emit();
+    });
+  }
+
+  unselectAll() {
+    const unselectRequests = this.todos.filter(todo => todo.isSelected).map(todo => {
+      todo.isSelected = false;
+      return this.todoService.putTodos(todo);
+    });
+
+    forkJoin(unselectRequests).subscribe(() => {
+      this.update.emit();
+    });
+  }
+
   completeAllSelected() {
     this.todos.filter(todo => todo.isSelected).forEach(todo => {
       todo.isCompleted = true;

@@ -1,6 +1,8 @@
 <div class="seperator-container">
   <p>{{ importanceLabel }}</p>
   <hr>
+  <button *ngIf="checkSelected()" (click)="unselectAll()">Unselect All</button>
+  <button *ngIf="getSelectedLength() != todos.length" (click)="selectAll()">Select All</button>
   <button *ngIf="importance != 0 && importance != -1 && checkSelected()" (click)="moveSelectedDown()">Move Selected Down</button>
   <button *ngIf="importance != 2 && importance != -1 && checkSelected()" (click)="moveSelectedUp()">Move Selected Up</button>
   <button *ngIf="checkSelected() && importance != -1" (click)="completeAllSelected()">Complete Selected</button>
