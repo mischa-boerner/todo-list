@@ -22,6 +22,10 @@
       <button (click)="changeCompleted()">{{ todo.isCompleted ? 'Uncomplete' : 'Complete' }}</button>
     </div>
     <hr>
+    <div class="select-container">
+      <input type="checkbox" [(ngModel)]="todo.isSelected" (ngModelChange)="updateTodoItem()">
+    </div>
+    <hr *ngIf="todo.isCompleted">
     <div class="delete-button-container" *ngIf="todo.isCompleted">
       <button (click)="deleteTodo()">Delete</button>
     </div>

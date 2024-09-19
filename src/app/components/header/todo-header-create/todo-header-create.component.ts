@@ -35,7 +35,8 @@ export class TodoHeaderCreateComponent {
         taskTitle: this.taskTitleInputText,
         taskDescription: '',
         isCompleted: false,
-        importance: this.taskImportance
+        importance: this.taskImportance,
+        isSelected: false
       }
 
       this.todoService.postTodos(newTodo).subscribe(() => {

@@ -5,6 +5,7 @@ import {TodoService} from "../../../service/todo.service";
 import {NgForOf, NgIf} from "@angular/common";
 import {TodoHeaderComponent} from "../../header/todo-header/todo-header.component";
 import {forkJoin} from "rxjs";
+import {CardSeperatorComponent} from "../card-seperator/card-seperator.component";
 
 @Component({
   selector: 'app-todo-card-view',
@@ -13,7 +14,9 @@ import {forkJoin} from "rxjs";
     TodoCardComponent,
     NgForOf,
     TodoHeaderComponent,
-    NgIf
+    NgIf,
+    CardSeperatorComponent,
+    CardSeperatorComponent
   ],
   templateUrl: './todo-card-view.component.html',
   styleUrl: './todo-card-view.component.scss'
@@ -35,6 +38,8 @@ export class TodoCardViewComponent implements OnInit{
 
   searchResult: Todo[] = [];
 
+  selectedTodos: Todo[] = [];
+
   ngOnInit(): void {
     this.loadData()
   }
@@ -47,6 +52,8 @@ export class TodoCardViewComponent implements OnInit{
       this.normalTodos = todo.filter(todo => !todo.isCompleted && todo.importance === 0);
 
       this.completedTodos = todo.filter(todo => todo.isCompleted);
+
+      this.selectedTodos = todo.filter(todo => todo.isSelected);
     });
   }
 
@@ -57,12 +64,4 @@ export class TodoCardViewComponent implements OnInit{
   trackById(index: number, item: Todo): string {
     return item.id;
   }
-
-  deleteAllCompleted() {
-    const deleteRequests = this.completedTodos.map(todo => this.todoService.deleteTodo(todo.id));
-    forkJoin(deleteRequests).subscribe(() => {
-      this.loadData();
-    });
-  }
-
 }

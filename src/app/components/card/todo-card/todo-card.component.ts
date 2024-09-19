@@ -50,8 +50,4 @@ export class TodoCardComponent {
       this.update.emit();
     })
   }
-
-  navigateToDetail(id: string) {
-    this.router.navigate(['/todo', id]);
-  }
 }

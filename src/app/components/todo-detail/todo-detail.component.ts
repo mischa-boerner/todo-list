@@ -23,7 +23,8 @@ export class TodoDetailComponent implements OnInit{
     taskTitle: ' ',
     taskDescription: ' ',
     isCompleted: false,
-    importance: 0
+    importance: 0,
+    isSelected: false
   };
   todoId!: string;
 
@@ -48,7 +49,8 @@ export class TodoDetailComponent implements OnInit{
       taskTitle: this.todo.taskTitle,
       taskDescription: this.todo.taskDescription,
       isCompleted: this.todo.isCompleted,
-      importance: this.todo.importance
+      importance: this.todo.importance,
+      isSelected: this.todo.isSelected
     };
     this.todoService.putTodos(updatedTodo).subscribe();
   }

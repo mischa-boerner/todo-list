@@ -7,36 +7,42 @@
         <div id="urgent" class="urgent-container">
           <app-todo-card *ngFor="let t of (showAllUrgentTodos ? urgentTodos : urgentTodos.slice(0, 4)); trackBy: trackById" [todo]="t" (update)="loadData()"></app-todo-card>
         </div>
-        <div class="seperator-container">
-          <p>Urgent</p>
-          <hr>
-          <button *ngIf="urgentTodos.length > 4 && !showAllUrgentTodos" (click)="showAllUrgentTodos = true">Show All</button>
-          <button *ngIf="showAllUrgentTodos" (click)="showAllUrgentTodos = false">Show Less</button>
-        </div>
+        <app-card-seperator
+          [todos]="urgentTodos"
+          [importanceLabel]="'Urgent'"
+          [importance]="2"
+          [showAll]="showAllUrgentTodos"
+          (update)="loadData()"
+          (toggleShow)="showAllUrgentTodos = $event">
+        </app-card-seperator>
       </div>
 
       <div *ngIf="importantTodos.length != 0">
         <div id="important" class="important-container">
           <app-todo-card *ngFor="let t of (showAllImportantTodos ? importantTodos : importantTodos.slice(0, 4)); trackBy: trackById" [todo]="t" (update)="loadData()"></app-todo-card>
         </div>
-        <div class="seperator-container">
-          <p>Important</p>
-          <hr>
-          <button *ngIf="importantTodos.length > 4 && !showAllImportantTodos" (click)="showAllImportantTodos = true">Show All</button>
-          <button *ngIf="showAllImportantTodos" (click)="showAllImportantTodos = false">Show Less</button>
-        </div>
+        <app-card-seperator
+          [todos]="importantTodos"
+          [importanceLabel]="'Important'"
+          [importance]="1"
+          [showAll]="showAllImportantTodos"
+          (update)="loadData()"
+          (toggleShow)="showAllImportantTodos = $event">
+        </app-card-seperator>
       </div>
 
       <div *ngIf="normalTodos.length != 0">
         <div id="normal" class="normal-container">
           <app-todo-card *ngFor="let t of (showAllNormalTodos ? normalTodos : normalTodos.slice(0, 4)); trackBy: trackById" [todo]="t" (update)="loadData()"></app-todo-card>
         </div>
-        <div class="seperator-container">
-          <p>Normal</p>
-          <hr>
-          <button *ngIf="normalTodos.length > 4 && !showAllNormalTodos" (click)="showAllNormalTodos = true">Show All</button>
-          <button *ngIf="showAllNormalTodos" (click)="showAllNormalTodos = false">Show Less</button>
-        </div>
+        <app-card-seperator
+          [todos]="normalTodos"
+          [importanceLabel]="'Normal'"
+          [importance]="0"
+          [showAll]="showAllNormalTodos"
+          (update)="loadData()"
+          (toggleShow)="showAllNormalTodos = $event">
+        </app-card-seperator>
       </div>
     </div>
 
@@ -44,13 +50,14 @@
       <div id="completed" class="completed-todo-container">
         <app-todo-card *ngFor="let t of (showAllCompletedTodos ? completedTodos : completedTodos.slice(0, 4)); trackBy: trackById" [todo]="t" (update)="loadData()"></app-todo-card>
       </div>
-      <div class="seperator-container">
-        <p>Completed</p>
-        <hr>
-        <button (click)="deleteAllCompleted()">Delete All</button>
-        <button *ngIf="completedTodos.length > 4 && !showAllCompletedTodos" (click)="showAllCompletedTodos = true">Show All</button>
-        <button *ngIf="showAllCompletedTodos" (click)="showAllCompletedTodos = false">Show Less</button>
-      </div>
+      <app-card-seperator
+        [todos]="completedTodos"
+        [importanceLabel]="'Completed'"
+        [importance]="-1"
+        [showAll]="showAllCompletedTodos"
+        (update)="loadData()"
+        (toggleShow)="showAllCompletedTodos = $event">
+      </app-card-seperator>
     </div>
   </div>
 
