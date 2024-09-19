@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Output} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, EventEmitter, HostListener, OnInit, Output, ViewChild} from '@angular/core';
 import {TodoHeaderSearchComponent} from "../todo-header-search/todo-header-search.component";
 import {TodoHeaderCreateComponent} from "../todo-header-create/todo-header-create.component";
 import {Todo} from "../../../interfaces/todo";
@@ -17,9 +17,16 @@ import {ViewSelectorComponent} from "../view-selector/view-selector.component";
   templateUrl: './todo-header.component.html',
   styleUrl: './todo-header.component.scss'
 })
-export class TodoHeaderComponent {
+export class TodoHeaderComponent implements AfterViewInit{
+  @ViewChild('headerContainer') headerContainer!: ElementRef;
+  @ViewChild('headerPlaceholder') headerPlaceholder!: ElementRef;
+
   @Output() createTodo = new EventEmitter<void>();
   @Output() searchTodo = new EventEmitter<Todo[]>();
+
+  ngAfterViewInit() {
+    this.headerPlaceholder.nativeElement.style.height = `${this.getHeaderHeight()}px`;
+  }
 
   onCreateTodo(todo: Todo) {
     this.createTodo.emit();
@@ -28,4 +35,20 @@ export class TodoHeaderComponent {
   onSearchTodo(searchResult: Todo[]) {
     this.searchTodo.emit(searchResult);
   }
+
+  getHeaderHeight(): number {
+    return this.headerContainer.nativeElement.offsetHeight;
+  }
+
+  scrollToSection(sectionId: string) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const headerHeight = this.getHeaderHeight();
+      window.scrollTo({
+        top: section.offsetTop - headerHeight,
+        behavior: 'smooth'
+      });
+    }
+  }
+
 }

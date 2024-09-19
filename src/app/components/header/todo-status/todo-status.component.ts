@@ -1,4 +1,4 @@
-import {Component, inject, OnInit} from '@angular/core';
+import {Component, EventEmitter, inject, OnInit, Output} from '@angular/core';
 import {TodoService} from "../../../service/todo.service";
 import {FormsModule} from "@angular/forms";
 import {MatTooltip, MatTooltipModule} from '@angular/material/tooltip';
@@ -17,12 +17,13 @@ import {Todo} from "../../../interfaces/todo";
 export class TodoStatusComponent implements OnInit{
   private todoService: TodoService = inject(TodoService);
 
+  @Output() scroll = new EventEmitter<string>();
+
   totalTodos: number = 0;
   urgentTodos: number = 0;
   importantTodos: number = 0;
   normalTodos: number = 0;
   completedTodos: number = 0;
-
 
   ngOnInit() {
     this.getTodoAmount()
@@ -41,6 +42,8 @@ export class TodoStatusComponent implements OnInit{
     });
   }
 
-
+  doScroll(str: string) {
+    this.scroll.emit('string');
+  }
 
 }

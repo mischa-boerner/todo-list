@@ -39,6 +39,10 @@ $todo-list-theme: mat.define-theme((
   outline: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 input[type="text"], button, textarea, select {
   border-radius: 20px;
   border-style: solid;

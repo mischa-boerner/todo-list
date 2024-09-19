@@ -28,7 +28,7 @@
       "id": "6",
       "taskTitle": "Implement dark mode",
       "taskDescription": "Add a dark mode option to the application settings.",
-      "isCompleted": false,
+      "isCompleted": true,
       "importance": 2,
       "isSelected": false
     },
@@ -37,7 +37,7 @@
       "taskTitle": "Refactor authentication module",
       "taskDescription": "Refactor the authentication module to improve code readability.",
       "isCompleted": false,
-      "importance": 1,
+      "importance": 2,
       "isSelected": false
     },
     {
@@ -109,7 +109,7 @@
       "taskTitle": "Conduct performance testing",
       "taskDescription": "Perform load and stress testing.",
       "isCompleted": false,
-      "importance": 2,
+      "importance": 0,
       "isSelected": false
     },
     {
@@ -133,7 +133,7 @@
       "taskTitle": "Implement caching",
       "taskDescription": "Add caching to improve application performance.",
       "isCompleted": false,
-      "importance": 2,
+      "importance": 1,
       "isSelected": false
     },
     {
@@ -148,7 +148,7 @@
       "id": "26",
       "taskTitle": "Fix email notifications",
       "taskDescription": "Resolve issues with email notifications not being sent.",
-      "isCompleted": false,
+      "isCompleted": true,
       "importance": 2,
       "isSelected": false
     },
@@ -164,7 +164,7 @@
       "id": "28",
       "taskTitle": "Conduct security audit",
       "taskDescription": "Perform a security audit on the application.",
-      "isCompleted": false,
+      "isCompleted": true,
       "importance": 2,
       "isSelected": false
     },
@@ -204,7 +204,7 @@
       "id": "33",
       "taskTitle": "Fix mobile responsiveness",
       "taskDescription": "Ensure the website is fully responsive on mobile devices.",
-      "isCompleted": false,
+      "isCompleted": true,
       "importance": 2,
       "isSelected": false
     },
@@ -220,7 +220,7 @@
       "id": "36",
       "taskTitle": "Fix image upload issues",
       "taskDescription": "Resolve issues with image uploads failing.",
-      "isCompleted": false,
+      "isCompleted": true,
       "importance": 2,
       "isSelected": false
     },
@@ -244,7 +244,7 @@
       "id": "39",
       "taskTitle": "Fix search indexing",
       "taskDescription": "Resolve issues with search indexing not working correctly.",
-      "isCompleted": false,
+      "isCompleted": true,
       "importance": 2,
       "isSelected": false
     },
@@ -268,7 +268,7 @@
       "id": "42",
       "taskTitle": "Fix broken images",
       "taskDescription": "Identify and fix broken images on the website.",
-      "isCompleted": false,
+      "isCompleted": true,
       "importance": 2,
       "isSelected": false
     },
@@ -292,7 +292,7 @@
       "id": "45",
       "taskTitle": "Fix form validation issues",
       "taskDescription": "Resolve issues with form validation not working correctly.",
-      "isCompleted": false,
+      "isCompleted": true,
       "importance": 2,
       "isSelected": false
     },
@@ -316,7 +316,7 @@
       "id": "48",
       "taskTitle": "Fix API rate limiting",
       "taskDescription": "Resolve issues with API rate limiting causing errors.",
-      "isCompleted": false,
+      "isCompleted": true,
       "importance": 2,
       "isSelected": false
     },
@@ -339,6 +339,22 @@
     {
       "id": "81f53515-7c79-45a1-8488-305717d82c61",
       "taskTitle": "test",
+      "taskDescription": "",
+      "isCompleted": false,
+      "importance": 1,
+      "isSelected": false
+    },
+    {
+      "id": "ee334fe9-5437-495e-acbc-5916645d74b7",
+      "taskTitle": "test 1",
+      "taskDescription": "",
+      "isCompleted": false,
+      "importance": 0,
+      "isSelected": false
+    },
+    {
+      "id": "6eeef816-053d-4dff-8357-38b570dd241c",
+      "taskTitle": "test 2",
       "taskDescription": "",
       "isCompleted": false,
       "importance": 1,
