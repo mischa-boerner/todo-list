@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {RouterLink, RouterOutlet} from '@angular/router';
 import {TodoStatusComponent} from "./components/header/todo-status/todo-status.component";
 import {ViewSelectorComponent} from "./components/header/view-selector/view-selector.component";
@@ -10,6 +10,6 @@ import {ViewSelectorComponent} from "./components/header/view-selector/view-sele
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent{
   title = 'todo-list';
 }

@@ -4,7 +4,7 @@
       "id": "1",
       "taskTitle": "Update project documentation",
       "taskDescription": "Ensure all project documentation is up to date and accurate.",
-      "isCompleted": false,
+      "isCompleted": true,
       "importance": 2,
       "isSelected": false
     },
@@ -12,7 +12,7 @@
       "id": "2",
       "taskTitle": "Fix login bug",
       "taskDescription": "Resolve the issue causing login failures for some users.",
-      "isCompleted": false,
+      "isCompleted": true,
       "importance": 2,
       "isSelected": false
     },
@@ -52,7 +52,7 @@
       "id": "11",
       "taskTitle": "Fix CSS issues",
       "taskDescription": "Resolve various CSS issues reported by the QA team.",
-      "isCompleted": false,
+      "isCompleted": true,
       "importance": 2,
       "isSelected": false
     },
@@ -68,7 +68,7 @@
       "id": "14",
       "taskTitle": "Set up CI/CD pipeline",
       "taskDescription": "Configure the CI/CD pipeline for automated deployments.",
-      "isCompleted": false,
+      "isCompleted": true,
       "importance": 2,
       "isSelected": false
     },
@@ -84,7 +84,7 @@
       "id": "17",
       "taskTitle": "Fix security vulnerabilities",
       "taskDescription": "Address the security vulnerabilities identified in the audit.",
-      "isCompleted": false,
+      "isCompleted": true,
       "importance": 1,
       "isSelected": false
     },
@@ -107,7 +107,7 @@
     {
       "id": "20",
       "taskTitle": "Conduct performance testing",
-      "taskDescription": "Perform load and stress testing on the application.",
+      "taskDescription": "Perform load and stress testing.",
       "isCompleted": false,
       "importance": 2,
       "isSelected": false
@@ -276,7 +276,7 @@
       "id": "43",
       "taskTitle": "Update contact information",
       "taskDescription": "Ensure all contact information is up to date.",
-      "isCompleted": false,
+      "isCompleted": true,
       "importance": 0,
       "isSelected": false
     },

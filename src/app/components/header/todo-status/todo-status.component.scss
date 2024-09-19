@@ -2,17 +2,18 @@ a {
   margin: 0.2rem 0 0.2rem 0 ;
   padding: 2px;
   color: white;
-  flex-grow: 1;
+  flex: 1 1 auto;
   text-align: center;
   border-radius: 1rem;
   cursor: pointer;
   user-select: none;
   text-decoration: none;
+  width: 2.5rem;
 }
 
 .status-pill {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
   width: 10rem;

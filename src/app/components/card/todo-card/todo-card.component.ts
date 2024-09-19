@@ -1,4 +1,4 @@
-import {Component, EventEmitter, inject, Input, Output} from '@angular/core';
+import {Component, EventEmitter, HostListener, inject, Input, Output} from '@angular/core';
 import {Todo} from "../../../interfaces/todo";
 import {Router} from "@angular/router";
 import {ImportanceCardPipe} from "../../../pipes/importance-card.pipe";
@@ -37,6 +37,7 @@ export class TodoCardComponent {
 
   changeCompleted() {
     this.todo.isCompleted = !this.todo.isCompleted;
+    this.todo.isSelected = false;
     this.updateTodoItem()
   }
 
@@ -49,5 +50,15 @@ export class TodoCardComponent {
     this.todoService.deleteTodo(this.todo.id).subscribe(deletedTodo => {
       this.update.emit();
     })
+  }
+
+  @HostListener('click', ['$event'])
+  onClick(event: MouseEvent) {
+    if (event.shiftKey && event.button === 0) {
+      this.todo.isSelected = !this.todo.isSelected;
+      this.todoService.putTodos(this.todo).subscribe(() => {
+        this.update.emit();
+      })
+    }
   }
 }
