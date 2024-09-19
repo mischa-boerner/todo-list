@@ -60,7 +60,7 @@ input[type="text"]:hover, textarea:hover, button:hover {
   background-color: lightgrey;
 }
 
-button:hover {
+button:hover, select:hover{
   cursor: pointer;
 }
 
@@ -96,6 +96,12 @@ button:hover {
 
 .urgent:hover {
   background-color: red;
+}
+
+.complete {
+  background-color: limegreen;
+  border-color: limegreen;
+  color: white;
 }
 
 

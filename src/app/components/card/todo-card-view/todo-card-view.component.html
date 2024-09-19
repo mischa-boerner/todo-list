@@ -4,7 +4,7 @@
   <div class="standard-todo-container" *ngIf="searchResult.length === 0">
     <div class="uncompleted-todo-container">
       <div *ngIf="urgentTodos.length != 0">
-        <div class="urgent-container">
+        <div id="urgent" class="urgent-container">
           <app-todo-card *ngFor="let t of (showAllUrgentTodos ? urgentTodos : urgentTodos.slice(0, 4)); trackBy: trackById" [todo]="t" (update)="loadData()"></app-todo-card>
         </div>
         <div class="seperator-container">
@@ -16,7 +16,7 @@
       </div>
 
       <div *ngIf="importantTodos.length != 0">
-        <div class="important-container">
+        <div id="important" class="important-container">
           <app-todo-card *ngFor="let t of (showAllImportantTodos ? importantTodos : importantTodos.slice(0, 4)); trackBy: trackById" [todo]="t" (update)="loadData()"></app-todo-card>
         </div>
         <div class="seperator-container">
@@ -28,7 +28,7 @@
       </div>
 
       <div *ngIf="normalTodos.length != 0">
-        <div class="normal-container">
+        <div id="normal" class="normal-container">
           <app-todo-card *ngFor="let t of (showAllNormalTodos ? normalTodos : normalTodos.slice(0, 4)); trackBy: trackById" [todo]="t" (update)="loadData()"></app-todo-card>
         </div>
         <div class="seperator-container">
@@ -41,7 +41,7 @@
     </div>
 
     <div *ngIf="completedTodos.length != 0">
-      <div class="completed-todo-container">
+      <div id="completed" class="completed-todo-container">
         <app-todo-card *ngFor="let t of (showAllCompletedTodos ? completedTodos : completedTodos.slice(0, 4)); trackBy: trackById" [todo]="t" (update)="loadData()"></app-todo-card>
       </div>
       <div class="seperator-container">

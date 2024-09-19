@@ -7,31 +7,19 @@ import {DomSanitizer, SafeHtml} from "@angular/platform-browser";
   standalone: true
 })
 export class ImportanceCardPipe implements PipeTransform {
-
-  constructor(private sanitizer: DomSanitizer) {}
-
-  transform(todo: Todo): SafeHtml {
-    let importance = 'Normal';
-    let color = 'black';
+  transform(todo: Todo): string {
+    if (todo.isCompleted) {
+      return 'complete';
+    }
 
     switch (todo.importance) {
       case 1:
-        importance = 'Important';
-        color = 'orange';
-        break;
+        return 'important';
       case 2:
-        importance = 'Urgent';
-        color = 'red';
-        break;
+        return 'urgent';
+      default:
+        return 'normal';
     }
-
-    if (todo.isCompleted) {
-      importance = 'Complete'
-      color = 'limegreen';
-    }
-
-    const html = `<div style="background-color: ${color}; color: white; border-radius: 15px; padding: 4px">${importance}</div>`;
-    return this.sanitizer.bypassSecurityTrustHtml(html);
   }
 
 }

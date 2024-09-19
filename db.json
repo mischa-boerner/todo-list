@@ -1,38 +1,353 @@
 {
   "todos": [
     {
-      "id": "14e840fe7-6870-46a4-b756-d2271ca41fa0",
-      "taskTitle": "Neues Feature implementieren",
-      "taskDescription": "Implementieren Sie das neue Feature gemäß den Spezifikationen. test",
+      "id": "1",
+      "taskTitle": "Update project documentation",
+      "taskDescription": "Ensure all project documentation is up to date and accurate.",
       "isCompleted": false,
       "importance": 1
     },
     {
-      "id": "33e840fe7-6870-46a4-b756-d2271ca41fa0",
-      "taskTitle": "Sicherheitsrichtlinien aktualisieren",
-      "taskDescription": "Aktualisieren Sie die Sicherheitsrichtlinien des Unternehmens.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndsadasd\n",
+      "id": "2",
+      "taskTitle": "Fix login bug",
+      "taskDescription": "Resolve the issue causing login failures for some users.",
+      "isCompleted": true,
+      "importance": 2
+    },
+    {
+      "id": "3",
+      "taskTitle": "Design new homepage layout",
+      "taskDescription": "Create a new layout for the homepage to improve user experience.",
       "isCompleted": false,
       "importance": 1
     },
     {
-      "id": "a58f8b45-c453-4f14-889a-8847712afa47",
-      "taskTitle": "Test",
-      "taskDescription": "",
-      "isCompleted": false,
-      "importance": 1
-    },
-    {
-      "id": "f9258afd-2fdd-4794-aa70-17d6148d8a7c",
-      "taskTitle": "Test 2",
-      "taskDescription": "",
+      "id": "4",
+      "taskTitle": "Conduct user interviews",
+      "taskDescription": "Interview 10 users to gather feedback on the new feature.",
       "isCompleted": false,
       "importance": 0
     },
     {
-      "id": "362c7dc8-9769-49fc-9a4d-d4b72804dfb3",
-      "taskTitle": "dsad",
-      "taskDescription": "",
+      "id": "5",
+      "taskTitle": "Optimize database queries",
+      "taskDescription": "Improve the performance of database queries to reduce load times.",
+      "isCompleted": true,
+      "importance": 2
+    },
+    {
+      "id": "6",
+      "taskTitle": "Implement dark mode",
+      "taskDescription": "Add a dark mode option to the application settings.",
       "isCompleted": false,
+      "importance": 1
+    },
+    {
+      "id": "7",
+      "taskTitle": "Write unit tests",
+      "taskDescription": "Write unit tests for the new API endpoints.",
+      "isCompleted": false,
+      "importance": 0
+    },
+    {
+      "id": "8",
+      "taskTitle": "Refactor authentication module",
+      "taskDescription": "Refactor the authentication module to improve code readability.",
+      "isCompleted": true,
+      "importance": 1
+    },
+    {
+      "id": "9",
+      "taskTitle": "Update dependencies",
+      "taskDescription": "Update all project dependencies to their latest versions.",
+      "isCompleted": false,
+      "importance": 0
+    },
+    {
+      "id": "10",
+      "taskTitle": "Create marketing plan",
+      "taskDescription": "Develop a marketing plan for the upcoming product launch.",
+      "isCompleted": false,
+      "importance": 1
+    },
+    {
+      "id": "11",
+      "taskTitle": "Fix CSS issues",
+      "taskDescription": "Resolve various CSS issues reported by the QA team.",
+      "isCompleted": true,
+      "importance": 2
+    },
+    {
+      "id": "12",
+      "taskTitle": "Prepare presentation",
+      "taskDescription": "Prepare a presentation for the quarterly review meeting.",
+      "isCompleted": false,
+      "importance": 1
+    },
+    {
+      "id": "13",
+      "taskTitle": "Conduct code review",
+      "taskDescription": "Review the code submitted by the development team.",
+      "isCompleted": false,
+      "importance": 0
+    },
+    {
+      "id": "14",
+      "taskTitle": "Set up CI/CD pipeline",
+      "taskDescription": "Configure the CI/CD pipeline for automated deployments.",
+      "isCompleted": true,
+      "importance": 2
+    },
+    {
+      "id": "15",
+      "taskTitle": "Research new technologies",
+      "taskDescription": "Research new technologies that could benefit the project.",
+      "isCompleted": false,
+      "importance": 0
+    },
+    {
+      "id": "16",
+      "taskTitle": "Update user guide",
+      "taskDescription": "Update the user guide to include the latest features.",
+      "isCompleted": false,
+      "importance": 1
+    },
+    {
+      "id": "17",
+      "taskTitle": "Fix security vulnerabilities",
+      "taskDescription": "Address the security vulnerabilities identified in the audit.",
+      "isCompleted": true,
+      "importance": 2
+    },
+    {
+      "id": "18",
+      "taskTitle": "Design new logo",
+      "taskDescription": "Create a new logo for the rebranding effort.",
+      "isCompleted": false,
+      "importance": 1
+    },
+    {
+      "id": "19",
+      "taskTitle": "Implement search functionality",
+      "taskDescription": "Add search functionality to the application.",
+      "isCompleted": false,
+      "importance": 1
+    },
+    {
+      "id": "20",
+      "taskTitle": "Conduct performance testing",
+      "taskDescription": "Perform load and stress testing on the application.",
+      "isCompleted": true,
+      "importance": 2
+    },
+    {
+      "id": "21",
+      "taskTitle": "Update privacy policy",
+      "taskDescription": "Revise the privacy policy to comply with new regulations.",
+      "isCompleted": false,
+      "importance": 1
+    },
+    {
+      "id": "22",
+      "taskTitle": "Fix broken links",
+      "taskDescription": "Identify and fix broken links on the website.",
+      "isCompleted": true,
+      "importance": 0
+    },
+    {
+      "id": "23",
+      "taskTitle": "Create onboarding process",
+      "taskDescription": "Develop an onboarding process for new employees.",
+      "isCompleted": false,
+      "importance": 1
+    },
+    {
+      "id": "24",
+      "taskTitle": "Implement caching",
+      "taskDescription": "Add caching to improve application performance.",
+      "isCompleted": false,
+      "importance": 2
+    },
+    {
+      "id": "25",
+      "taskTitle": "Write blog post",
+      "taskDescription": "Write a blog post about the latest product update.",
+      "isCompleted": false,
+      "importance": 0
+    },
+    {
+      "id": "26",
+      "taskTitle": "Fix email notifications",
+      "taskDescription": "Resolve issues with email notifications not being sent.",
+      "isCompleted": true,
+      "importance": 2
+    },
+    {
+      "id": "27",
+      "taskTitle": "Update API documentation",
+      "taskDescription": "Ensure the API documentation is up to date.",
+      "isCompleted": false,
+      "importance": 1
+    },
+    {
+      "id": "28",
+      "taskTitle": "Conduct security audit",
+      "taskDescription": "Perform a security audit on the application.",
+      "isCompleted": false,
+      "importance": 2
+    },
+    {
+      "id": "29",
+      "taskTitle": "Create user personas",
+      "taskDescription": "Develop user personas to better understand our audience.",
+      "isCompleted": false,
+      "importance": 0
+    },
+    {
+      "id": "30",
+      "taskTitle": "Fix pagination issues",
+      "taskDescription": "Resolve issues with pagination on the product listing page.",
+      "isCompleted": true,
+      "importance": 1
+    },
+    {
+      "id": "31",
+      "taskTitle": "Implement two-factor authentication",
+      "taskDescription": "Add two-factor authentication to enhance security.",
+      "isCompleted": false,
+      "importance": 2
+    },
+    {
+      "id": "32",
+      "taskTitle": "Update terms of service",
+      "taskDescription": "Revise the terms of service to reflect recent changes.",
+      "isCompleted": false,
+      "importance": 1
+    },
+    {
+      "id": "33",
+      "taskTitle": "Fix mobile responsiveness",
+      "taskDescription": "Ensure the website is fully responsive on mobile devices.",
+      "isCompleted": true,
+      "importance": 2
+    },
+    {
+      "id": "34",
+      "taskTitle": "Create FAQ page",
+      "taskDescription": "Develop a FAQ page to address common user questions.",
+      "isCompleted": false,
+      "importance": 0
+    },
+    {
+      "id": "35",
+      "taskTitle": "Implement feature flags",
+      "taskDescription": "Add feature flags to enable/disable features easily.",
+      "isCompleted": false,
+      "importance": 1
+    },
+    {
+      "id": "36",
+      "taskTitle": "Fix image upload issues",
+      "taskDescription": "Resolve issues with image uploads failing.",
+      "isCompleted": true,
+      "importance": 2
+    },
+    {
+      "id": "37",
+      "taskTitle": "Update landing page",
+      "taskDescription": "Revamp the landing page to improve conversion rates.",
+      "isCompleted": false,
+      "importance": 1
+    },
+    {
+      "id": "38",
+      "taskTitle": "Conduct A/B testing",
+      "taskDescription": "Perform A/B testing to determine the best design.",
+      "isCompleted": false,
+      "importance": 0
+    },
+    {
+      "id": "39",
+      "taskTitle": "Fix search indexing",
+      "taskDescription": "Resolve issues with search indexing not working correctly.",
+      "isCompleted": true,
+      "importance": 2
+    },
+    {
+      "id": "40",
+      "taskTitle": "Create user feedback form",
+      "taskDescription": "Develop a form to collect user feedback.",
+      "isCompleted": false,
+      "importance": 0
+    },
+    {
+      "id": "41",
+      "taskTitle": "Implement push notifications",
+      "taskDescription": "Add push notifications to the mobile app.",
+      "isCompleted": false,
+      "importance": 1
+    },
+    {
+      "id": "42",
+      "taskTitle": "Fix broken images",
+      "taskDescription": "Identify and fix broken images on the website.",
+      "isCompleted": true,
+      "importance": 2
+    },
+    {
+      "id": "43",
+      "taskTitle": "Update contact information",
+      "taskDescription": "Ensure all contact information is up to date.",
+      "isCompleted": false,
+      "importance": 0
+    },
+    {
+      "id": "44",
+      "taskTitle": "Create social media strategy",
+      "taskDescription": "Develop a strategy for social media engagement.",
+      "isCompleted": false,
+      "importance": 1
+    },
+    {
+      "id": "45",
+      "taskTitle": "Fix form validation issues",
+      "taskDescription": "Resolve issues with form validation not working correctly.",
+      "isCompleted": true,
+      "importance": 2
+    },
+    {
+      "id": "46",
+      "taskTitle": "Update color scheme",
+      "taskDescription": "Revise the color scheme to improve accessibility.",
+      "isCompleted": false,
+      "importance": 1
+    },
+    {
+      "id": "47",
+      "taskTitle": "Conduct usability testing",
+      "taskDescription": "Perform usability testing to identify user pain points.",
+      "isCompleted": false,
+      "importance": 0
+    },
+    {
+      "id": "48",
+      "taskTitle": "Fix API rate limiting",
+      "taskDescription": "Resolve issues with API rate limiting causing errors.",
+      "isCompleted": true,
+      "importance": 2
+    },
+    {
+      "id": "49",
+      "taskTitle": "Create style guide",
+      "taskDescription": "Develop a style guide for consistent design.",
+      "isCompleted": false,
+      "importance": 1
+    },
+    {
+      "id": "50",
+      "taskTitle": "Fix session timeout issues",
+      "taskDescription": "Resolve issues with session timeouts occurring too frequently.",
+      "isCompleted": true,
       "importance": 2
     }
   ]

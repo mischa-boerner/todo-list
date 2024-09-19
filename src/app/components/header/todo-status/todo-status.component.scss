@@ -1,12 +1,13 @@
-p {
+a {
   margin: 0.2rem 0 0.2rem 0 ;
   padding: 2px;
   color: white;
   flex-grow: 1;
   text-align: center;
   border-radius: 1rem;
-  cursor: default;
+  cursor: pointer;
   user-select: none;
+  text-decoration: none;
 }
 
 .status-pill {

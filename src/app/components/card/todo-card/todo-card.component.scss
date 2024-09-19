@@ -15,6 +15,12 @@ input {
   font-size: medium;
 }
 
+select {
+  width: 100%;
+  text-align: center;
+  padding: 0.2rem;
+}
+
 textarea:hover,
 input:hover {
   background-color: whitesmoke;

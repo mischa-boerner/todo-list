@@ -16,12 +16,9 @@
 .completed-todo-container app-todo-card,
 .search-container app-todo-card {
   flex-grow: 1;
+  width: 352.5px;
   max-width: 352.5px;
   box-sizing: border-box;
-}
-
-.completed-todo-container app-todo-card {
-  width: 352.5px;
 }
 
 .seperator-container {

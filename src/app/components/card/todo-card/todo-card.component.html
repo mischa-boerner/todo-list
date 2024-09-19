@@ -1,5 +1,11 @@
 <div class="card-container">
-  <div class="importance-container" [innerHTML]="todo | importanceCard"></div>
+  <div class="importance-container">
+    <select [(ngModel)]="todo.importance" [ngClass]="todo | importanceCard ">
+      <option value="0" (click)="changeImportance(0)">Normal</option>
+      <option value="1" (click)="changeImportance(1)">Important</option>
+      <option value="2" (click)="changeImportance(2)">Urgent</option>
+    </select>
+  </div>
 
   <div class="main-container">
     <div class="title-container">
@@ -16,11 +22,6 @@
       <button (click)="changeCompleted()">{{ todo.isCompleted ? 'Uncomplete' : 'Complete' }}</button>
     </div>
     <hr>
-    <div class="importance-button-container" *ngIf="!todo.isCompleted">
-      <button (click)="changeImportance(0)" *ngIf="todo.importance !=  0">Normal</button>
-      <button (click)="changeImportance(1)" *ngIf="todo.importance !=  1">Important</button>
-      <button (click)="changeImportance(2)" *ngIf="todo.importance !=  2">Urgent</button>
-    </div>
     <div class="delete-button-container" *ngIf="todo.isCompleted">
       <button (click)="deleteTodo()">Delete</button>
     </div>
