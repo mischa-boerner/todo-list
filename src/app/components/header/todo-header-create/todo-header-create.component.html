@@ -1,0 +1,16 @@
+<div class="create-container">
+  <div class="button-container">
+    <div class="importance-button-container">
+      <button (click)="setImportance(0)" [ngClass]="{'normal': checkImportance(0)}">Normal</button>
+      <button (click)="setImportance(1)" [ngClass]="{'important': checkImportance(1)}">Important</button>
+      <button (click)="setImportance(2)" [ngClass]="{'urgent': checkImportance(2)}">Urgent</button>
+    </div>
+    <div class="create-button-container">
+      <button (click)="addTodo()">Create</button>
+    </div>
+  </div>
+
+  <div class="input-container">
+    <input #taskTitleInput [(ngModel)]="taskTitleInputText" type="text" placeholder="Enter new Todo Title">
+  </div>
+</div>

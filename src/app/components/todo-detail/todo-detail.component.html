@@ -3,11 +3,11 @@
   <p>Title </p>
   <input [(ngModel)]="todo.taskTitle" type="text" placeholder="Enter Task Title">
   <p>Description </p>
-  <textarea [(ngModel)]="todo.taskDescription" type="text" placeholder="Enter Task Description"></textarea>
+  <textarea [(ngModel)]="todo.taskDescription" type="text" placeholder="Enter Task Description" [spellcheck]="false"></textarea>
   <div class="importance-container">
-    <button class="importance-button" type="button" (click)="changeImportance(0)" [ngClass]="{'highlight': checkImportance(0)}">Normal</button>
-    <button class="importance-button" type="button" (click)="changeImportance(1)" [ngClass]="{'highlight': checkImportance(1)}">Important</button>
-    <button class="importance-button" type="button" (click)="changeImportance(2)" [ngClass]="{'highlight': checkImportance(2)}">Urgent</button>
+    <button class="importance-button" type="button" (click)="changeImportance(0)" [ngClass]="{'normal': checkImportance(0)}">Normal</button>
+    <button class="importance-button" type="button" (click)="changeImportance(1)" [ngClass]="{'important': checkImportance(1)}">Important</button>
+    <button class="importance-button" type="button" (click)="changeImportance(2)" [ngClass]="{'urgent': checkImportance(2)}">Urgent</button>
   </div>
   <div class="button-container">
     <button (click)="saveChanges()">Save</button>

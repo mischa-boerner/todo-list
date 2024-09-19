@@ -1,0 +1,31 @@
+<app-todo-header (createTodo)="loadData()" (searchTodo)="onSearchTodo($event)"></app-todo-header>
+
+<div class="todo-container">
+  <div *ngIf="searchResult.length === 0 && completedSearchResult.length === 0">
+    <p *ngIf="todos.length === 0">Nothing to do.</p>
+    <app-todo-item [todo]="t" (isCompletedChange)="updateTodoItem(t, $event)" *ngFor="let t of todos; trackBy: trackById"></app-todo-item>
+  </div>
+  <div *ngIf="searchResult.length > 0 ||completedSearchResult.length > 0">
+    <p *ngIf="searchResult.length === 0">No Todos found.</p>
+    <app-todo-item [todo]="t" (isCompletedChange)="updateTodoItem(t, $event)" *ngFor="let t of searchResult; trackBy: trackById"></app-todo-item>
+  </div>
+
+
+  <div class="completed-header">
+    <hr>
+    <button (click)="undoDelete()" *ngIf="deletedTodos.length != 0 && showCompleted">Undo Delete</button>
+    <button class="delete-completed" (click)="deleteCompletedTodos()" *ngIf="completedTodos.length != 0 && showCompleted">Delete Completed</button>
+    <button type="button" (click)="showCompletedTasks()">{{ showCompleted ? "Hide" : "Show" }} Completed</button>
+  </div>
+
+  <div *ngIf="showCompleted">
+    <div *ngIf="searchResult.length === 0 && completedSearchResult.length === 0">
+      <p *ngIf="completedTodos.length === 0">No completed Todos</p>
+      <app-todo-item [todo]="t" (isCompletedChange)="updateTodoItem(t, $event)" *ngFor="let t of completedTodos; trackBy: trackById"></app-todo-item>
+    </div>
+    <div *ngIf="searchResult.length > 0 ||completedSearchResult.length > 0">
+      <p *ngIf="completedSearchResult.length === 0">No completed Todos found.</p>
+      <app-todo-item [todo]="t" (isCompletedChange)="updateTodoItem(t, $event)" *ngFor="let t of completedSearchResult; trackBy: trackById"></app-todo-item>
+    </div>
+  </div>
+</div>

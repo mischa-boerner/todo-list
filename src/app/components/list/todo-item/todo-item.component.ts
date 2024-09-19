@@ -1,8 +1,8 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {FormsModule} from "@angular/forms";
 import {Router, RouterLink} from "@angular/router";
-import {Todo} from "../../interfaces/todo";
-import {ImportancePipe} from "../../pipes/importance.pipe";
+import {Todo} from "../../../interfaces/todo";
+import {ImportancePipe} from "../../../pipes/importance.pipe";
 import {NgClass} from "@angular/common";
 
 @Component({

@@ -1,12 +1,64 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  font-family: Arial, serif;
+  outline: none;
+}
+
+input[type="text"], button, textarea {
+  border-radius: 20px;
+  border-style: solid;
+  border-color: lightgrey;
+  padding: 10px;
+  background-color: whitesmoke;
+  transition: 0.15s;
+}
+
+textarea {
+  font-size: small;
+  scrollbar-width: thin;
+  resize: none;
+  height: 10rem;
+  overflow: clip;
+}
+
+input[type="text"]:hover, textarea:hover, button:hover {
+  background-color: lightgrey;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.highlight {
+  background-color: lightgrey;
+}
+
 .normal {
-  color: black;
+  background-color: black;
+  border-color: black;
+  color: white;
+}
+
+.normal:hover {
+  background-color: black;
 }
 
 .important {
-  color: orange;
+  background-color: orange;
+  border-color: orange;
+  color: white;
+}
+
+.important:hover {
+  background-color: orange;
 }
 
 .urgent {
-  color: red;
+  background-color: red;
+  border-color: red;
+  color: white;
 }
+
+.urgent:hover {
+  background-color: red;
+}
+

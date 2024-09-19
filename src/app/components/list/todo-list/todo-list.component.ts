@@ -1,15 +1,20 @@
 import {Component, ElementRef, HostListener, inject, OnInit, ViewChild, ViewContainerRef} from '@angular/core';
 import {TodoItemComponent} from "../todo-item/todo-item.component";
 import { v4 as uuidv4 } from 'uuid';
-import {TodoService} from "../../service/todo.service";
-import {Todo} from "../../interfaces/todo";
+import {TodoService} from "../../../service/todo.service";
+import {Todo} from "../../../interfaces/todo";
 import {forkJoin} from "rxjs";
+import {NgForOf, NgIf} from "@angular/common";
+import {TodoHeaderComponent} from "../../header/todo-header/todo-header.component";
 
 @Component({
   selector: 'app-todo-list',
   standalone: true,
   imports: [
-    TodoItemComponent
+    TodoItemComponent,
+    NgIf,
+    TodoHeaderComponent,
+    NgForOf
   ],
   templateUrl: './todo-list.component.html',
   styleUrl: './todo-list.component.scss'
@@ -31,37 +36,16 @@ export class TodoListComponent implements OnInit{
   private todoService: TodoService = inject(TodoService);
   todos: Todo[] = [];
   completedTodos: Todo[] = [];
-  searchTodos: Todo[] = [];
-  searchCompletedTodos: Todo[] = [];
+
+  searchResult: Todo[] = [];
+  completedSearchResult: Todo[] = [];
+
   deletedTodos: Todo[] = [];
+
   showCompleted = false;
-  isSearching = false;
 
   ngOnInit() {
     this.loadData();
-  }
-
-  //Fügt neuen Task hinzu und speicher diesen direkt ab
-  addTodoItem() {
-    const taskTitle = this.taskInput.nativeElement.value; //Zieht Task Titel aus Input Feld
-    console.log(this.todos);
-
-    if (taskTitle.trim()) {
-      const newTodo: Todo = {
-        id: uuidv4(),
-        taskTitle: taskTitle,
-        taskDescription: "",
-        isCompleted: false,
-        importance: 0
-      }
-
-      this.saveData(newTodo);
-      this.taskInput.nativeElement.value = '';
-    }
-  }
-
-  showCompletedTasks() {
-    this.showCompleted = !this.showCompleted;
   }
 
   updateTodoItem(todo: Todo, isCompleted: boolean) {
@@ -75,13 +59,6 @@ export class TodoListComponent implements OnInit{
     }
   }
 
-  saveData(todo: Todo) {
-    this.todoService.postTodos(todo).subscribe(savedTodo => {
-      console.log("Todo saved: ", savedTodo);
-      this.loadData();
-    })
-  }
-
   loadData() {
     this.todoService.getTodos().subscribe(todo => {
       console.log(todo);
@@ -91,22 +68,14 @@ export class TodoListComponent implements OnInit{
     });
   }
 
-  search(text: string) {
-    this.isSearching = true;
-    if(!text.trim()) {
-      this.searchTodos = [];
-      this.searchInput.nativeElement.value = '';
-      this.isSearching = false;
-      return;
-    }
+  onSearchTodo(searchResult: Todo[]) {
+    this.searchResult = searchResult.filter(todo => !todo.isCompleted).sort((a, b) => b.importance - a.importance);
+    this.completedSearchResult = searchResult.filter(todo => todo.isCompleted).sort((a, b) => b.importance - a.importance);
+    this.loadData();
+  }
 
-    this.searchTodos = this.todos.filter(todo =>
-      todo.taskTitle.toLowerCase().includes(text.toLowerCase())
-    );
-
-    this.searchCompletedTodos = this.completedTodos.filter(todo =>
-      todo.taskTitle.toLowerCase().includes(text.toLowerCase())
-    );
+  showCompletedTasks() {
+    this.showCompleted = !this.showCompleted;
   }
 
   deleteCompletedTodos() {
@@ -125,17 +94,7 @@ export class TodoListComponent implements OnInit{
     });
   }
 
-  @HostListener('document:keydown.escape', ['$event'])
-  handleEscapeKey(event: KeyboardEvent) {
-    this.search('');
-  }
-
-  @HostListener('document:keydown.enter', ['$event'])
-  handleEnterKey(event: KeyboardEvent) {
-    if (document.activeElement === this.searchInput.nativeElement) {
-      this.search(this.searchInput.nativeElement.value);
-    } else if (document.activeElement === this.taskInput.nativeElement) {
-      this.addTodoItem();
-    }
+  trackById(index: number, item: Todo): string {
+    return item.id;
   }
 }

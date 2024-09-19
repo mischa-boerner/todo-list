@@ -1,0 +1,27 @@
+div {
+  margin-top: 1rem;
+}
+
+.todo-container {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100wv;
+}
+
+.completed-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem
+}
+
+.completed-header hr {
+  flex-grow: 1;
+}
+
+.delete-completed:hover {
+  background-color: red;
+  border-color: red;
+  color: white;
+}
+
+

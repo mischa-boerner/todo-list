@@ -2,16 +2,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
-  box-sizing: border-box;
 }
 
-nav {
+div {
   font-family: Arial, serif;
   background-color: whitesmoke;
   padding: 10px;
   border-radius: 30px;
   border-style: solid;
   border-color: lightgrey;
+
+  i {
+    color: black; /* Set icon color to black */
+  }
 }

@@ -1,0 +1,63 @@
+<app-todo-header (createTodo)="loadData()" (searchTodo)="onSearchTodo($event)"></app-todo-header>
+
+<div class="todo-container">
+  <div class="standard-todo-container" *ngIf="searchResult.length === 0">
+    <div class="uncompleted-todo-container">
+      <div *ngIf="urgentTodos.length != 0">
+        <div class="urgent-container">
+          <app-todo-card *ngFor="let t of (showAllUrgentTodos ? urgentTodos : urgentTodos.slice(0, 4)); trackBy: trackById" [todo]="t" (update)="loadData()"></app-todo-card>
+        </div>
+        <div class="seperator-container">
+          <p>Urgent</p>
+          <hr>
+          <button *ngIf="urgentTodos.length > 4 && !showAllUrgentTodos" (click)="showAllUrgentTodos = true">Show All</button>
+          <button *ngIf="showAllUrgentTodos" (click)="showAllUrgentTodos = false">Show Less</button>
+        </div>
+      </div>
+
+      <div *ngIf="importantTodos.length != 0">
+        <div class="important-container">
+          <app-todo-card *ngFor="let t of (showAllImportantTodos ? importantTodos : importantTodos.slice(0, 4)); trackBy: trackById" [todo]="t" (update)="loadData()"></app-todo-card>
+        </div>
+        <div class="seperator-container">
+          <p>Important</p>
+          <hr>
+          <button *ngIf="importantTodos.length > 4 && !showAllImportantTodos" (click)="showAllImportantTodos = true">Show All</button>
+          <button *ngIf="showAllImportantTodos" (click)="showAllImportantTodos = false">Show Less</button>
+        </div>
+      </div>
+
+      <div *ngIf="normalTodos.length != 0">
+        <div class="normal-container">
+          <app-todo-card *ngFor="let t of (showAllNormalTodos ? normalTodos : normalTodos.slice(0, 4)); trackBy: trackById" [todo]="t" (update)="loadData()"></app-todo-card>
+        </div>
+        <div class="seperator-container">
+          <p>Normal</p>
+          <hr>
+          <button *ngIf="normalTodos.length > 4 && !showAllNormalTodos" (click)="showAllNormalTodos = true">Show All</button>
+          <button *ngIf="showAllNormalTodos" (click)="showAllNormalTodos = false">Show Less</button>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="completedTodos.length != 0">
+      <div class="completed-todo-container">
+        <app-todo-card *ngFor="let t of (showAllCompletedTodos ? completedTodos : completedTodos.slice(0, 4)); trackBy: trackById" [todo]="t" (update)="loadData()"></app-todo-card>
+      </div>
+      <div class="seperator-container">
+        <p>Completed</p>
+        <hr>
+        <button (click)="deleteAllCompleted()">Delete All</button>
+        <button *ngIf="completedTodos.length > 4 && !showAllCompletedTodos" (click)="showAllCompletedTodos = true">Show All</button>
+        <button *ngIf="showAllCompletedTodos" (click)="showAllCompletedTodos = false">Show Less</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="search-container" *ngIf="searchResult.length > 0">
+    <app-todo-card *ngFor="let t of searchResult; trackBy: trackById" [todo]="t" (update)="loadData()"></app-todo-card>
+  </div>
+</div>
+
+
+

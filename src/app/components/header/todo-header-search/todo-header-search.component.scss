@@ -1,0 +1,15 @@
+.search-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0.5rem
+}
+
+.search-container button {
+  width: 5rem;
+}
+
+.search-container input[type="text"] {
+  width: 352.5px - 22px;
+}

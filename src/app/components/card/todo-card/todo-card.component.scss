@@ -1,0 +1,71 @@
+button {
+  width: 6rem;
+}
+
+textarea {
+  width: 92.5%;
+  border: none;
+  resize: none;
+  overflow: auto;
+}
+
+input {
+  border: none;
+  width: 92.5%;
+  font-size: medium;
+}
+
+textarea:hover,
+input:hover {
+  background-color: whitesmoke;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: lightgrey;
+}
+
+.importance-container,
+.title-container,
+.description-container,
+.button-container {
+  padding: 5px;
+  background-color: whitesmoke;
+  border-bottom: lightgrey solid 3px;
+}
+
+.importance-container {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-style: none;
+}
+
+.button-container hr {
+  border: none;
+}
+
+.complete-button-container,
+.importance-button-container,
+.delete-button-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-content: space-evenly;
+  gap: 0.25rem;
+}
+
+.importance-container {
+  text-align: center;
+}
+

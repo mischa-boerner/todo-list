@@ -1,0 +1,14 @@
+.header-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+  width: 90rem;
+}
+
+.header-container div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}

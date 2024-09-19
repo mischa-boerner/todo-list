@@ -1,0 +1,29 @@
+<div class="card-container">
+  <div class="importance-container" [innerHTML]="todo | importanceCard"></div>
+
+  <div class="main-container">
+    <div class="title-container">
+      <input type="text" [(ngModel)]="todo.taskTitle" (ngModelChange)="updateTodoItem()">
+    </div>
+
+    <div class="description-container">
+      <textarea [(ngModel)]="todo.taskDescription" (ngModelChange)="updateTodoItem()" [spellcheck]="false"></textarea>
+    </div>
+  </div>
+
+  <div class="button-container">
+    <div class="complete-button-container">
+      <button (click)="changeCompleted()">{{ todo.isCompleted ? 'Uncomplete' : 'Complete' }}</button>
+    </div>
+    <hr>
+    <div class="importance-button-container" *ngIf="!todo.isCompleted">
+      <button (click)="changeImportance(0)" *ngIf="todo.importance !=  0">Normal</button>
+      <button (click)="changeImportance(1)" *ngIf="todo.importance !=  1">Important</button>
+      <button (click)="changeImportance(2)" *ngIf="todo.importance !=  2">Urgent</button>
+    </div>
+    <div class="delete-button-container" *ngIf="todo.isCompleted">
+      <button (click)="deleteTodo()">Delete</button>
+    </div>
+  </div>
+</div>
+

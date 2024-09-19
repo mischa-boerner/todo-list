@@ -1,88 +1,53 @@
 {
   "todos": [
     {
-      "id": "1e840fe7-6870-46a4-b756-d2271ca41fa0",
-      "taskTitle": "Projektplan erstellen",
-      "taskDescription": "Erstellen Sie einen detaillierten Projektplan für das neue Softwareentwicklungsprojekt.",
-      "isCompleted": false,
-      "importance": 1
-    },
-    {
-      "id": "2e840fe7-6870-46a4-b756-d2271ca41fa0",
-      "taskTitle": "Team-Meeting organisieren",
-      "taskDescription": "Organisieren Sie ein Team-Meeting, um die Projektanforderungen zu besprechen.",
-      "isCompleted": false,
-      "importance": 1
-    },
-    {
-      "id": "3e840fe7-6870-46a4-b756-d2271ca41fa0",
-      "taskTitle": "Kundendokumentation aktualisieren",
-      "taskDescription": "Aktualisieren Sie die Kundendokumentation mit den neuesten Produktinformationen.",
-      "isCompleted": false,
-      "importance": 0
-    },
-    {
-      "id": "5e840fe7-6870-46a4-b756-d2271ca41fa0",
-      "taskTitle": "Fehlerbehebung im System",
-      "taskDescription": "Beheben Sie die gemeldeten Fehler im System.",
-      "isCompleted": true,
-      "importance": 1
-    },
-    {
-      "id": "8e840fe7-6870-46a4-b756-d2271ca41fa0",
-      "taskTitle": "Benutzerhandbuch erstellen",
-      "taskDescription": "Erstellen Sie ein Benutzerhandbuch für die neue Softwareversion.",
-      "isCompleted": false,
-      "importance": 1
-    },
-    {
-      "id": "11e840fe7-6870-46a4-b756-d2271ca41fa0",
-      "taskTitle": "Kundensupport-Anfragen beantworten",
-      "taskDescription": "Beantworten Sie die eingegangenen Kundensupport-Anfragen.",
-      "isCompleted": false,
-      "importance": 1
-    },
-    {
       "id": "14e840fe7-6870-46a4-b756-d2271ca41fa0",
       "taskTitle": "Neues Feature implementieren",
-      "taskDescription": "Implementieren Sie das neue Feature gemäß den Spezifikationen.",
-      "isCompleted": false,
-      "importance": 1
-    },
-    {
-      "id": "17e840fe7-6870-46a4-b756-d2271ca41fa0",
-      "taskTitle": "Kundenfeedback analysieren",
-      "taskDescription": "Analysieren Sie das eingegangene Kundenfeedback und erstellen Sie einen Bericht.",
+      "taskDescription": "Implementieren Sie das neue Feature gemäß den Spezifikationen. test",
       "isCompleted": false,
       "importance": 1
     },
     {
       "id": "33e840fe7-6870-46a4-b756-d2271ca41fa0",
       "taskTitle": "Sicherheitsrichtlinien aktualisieren",
-      "taskDescription": "Aktualisieren Sie die Sicherheitsrichtlinien des Unternehmens.",
+      "taskDescription": "Aktualisieren Sie die Sicherheitsrichtlinien des Unternehmens.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndsadasd\n",
       "isCompleted": false,
-      "importance": 2
-    },
-    {
-      "id": "43e840fe7-6870-46a4-b756-d2271ca41fa0",
-      "taskTitle": "Sicherheitslücken beheben",
-      "taskDescription": "Beheben Sie die identifizierten Sicherheitslücken im System.",
-      "isCompleted": false,
-      "importance": 2
-    },
-    {
-      "id": "46e840fe7-6870-46a4-b756-d2271ca41fa0",
-      "taskTitle": "Kundensupport-Statistiken analysieren",
-      "taskDescription": "Analysieren Sie die Statistiken des Kundensupports und erstellen Sie einen Bericht.",
-      "isCompleted": true,
-      "importance": 2
+      "importance": 1
     },
     {
       "id": "49e840fe7-6870-46a4-b756-d2271ca41fa0",
       "taskTitle": "Kundensupport-Feedback einholen",
       "taskDescription": "Holen Sie Feedback vom Kundensupport-Team ein und analysieren Sie es.",
       "isCompleted": true,
-      "importance": 0
+      "importance": 1
+    },
+    {
+      "id": "a58f8b45-c453-4f14-889a-8847712afa47",
+      "taskTitle": "Test",
+      "taskDescription": "",
+      "isCompleted": false,
+      "importance": 1
+    },
+    {
+      "id": "f9258afd-2fdd-4794-aa70-17d6148d8a7c",
+      "taskTitle": "Test 2",
+      "taskDescription": "",
+      "isCompleted": false,
+      "importance": 1
+    },
+    {
+      "id": "0aeba18b-0b37-41a5-9e42-7ce2a8489030",
+      "taskTitle": "test",
+      "taskDescription": "",
+      "isCompleted": true,
+      "importance": 2
+    },
+    {
+      "id": "fdfbcb02-a2df-4c87-8ea2-59c92b270ed5",
+      "taskTitle": "test",
+      "taskDescription": "",
+      "isCompleted": false,
+      "importance": 1
     }
   ]
 }

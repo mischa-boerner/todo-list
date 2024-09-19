@@ -1,0 +1,31 @@
+.create-container,
+.button-container {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.5rem;
+}
+
+.input-container,
+.button-container {
+
+  display: flex;
+  align-items: center;
+}
+
+.input-container input {
+  flex-grow: 1;
+  width: 352.5px - 22px;
+}
+
+.importance-button-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  gap: 0.5rem;
+}
+
+button{
+  width: 5rem;
+}
+
+
