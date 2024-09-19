@@ -1,11 +1,11 @@
 <div>
   <div class="status-pill">
-    <p style="background-color: darkgray; margin-left: 0.2rem">{{ totalTodos }}</p>
+    <p style="background-color: darkgray; margin-left: 0.2rem" [matTooltip]="'Total Todos'">{{ totalTodos }}</p>
     <hr>
-    <p style="background-color: red">{{ urgentTodos }}</p>
-    <p style="background-color: orange">{{ importantTodos }}</p>
-    <p style="background-color: black">{{ normalTodos }}</p>
+    <p style="background-color: red" [matTooltip]="'Urgent Todos'">{{ urgentTodos }}</p>
+    <p style="background-color: orange" [matTooltip]="'Important Todos'">{{ importantTodos }}</p>
+    <p style="background-color: black" [matTooltip]="'Normal Todos'">{{ normalTodos }}</p>
     <hr>
-    <p style="background-color: limegreen; margin-right: 0.2rem">{{ completedTodos }}</p>
+    <p style="background-color: limegreen; margin-right: 0.2rem" [matTooltip]="'Completed Todos'">{{ completedTodos }}</p>
   </div>
 </div>

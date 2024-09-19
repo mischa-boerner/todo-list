@@ -4,13 +4,15 @@ import {Todo} from "../../../interfaces/todo";
 import { v4 as uuidv4 } from 'uuid';
 import {TodoService} from "../../../service/todo.service";
 import {NgClass} from "@angular/common";
+import {MatTooltip} from "@angular/material/tooltip";
 
 @Component({
   selector: 'app-todo-header-create',
   standalone: true,
   imports: [
     FormsModule,
-    NgClass
+    NgClass,
+    MatTooltip
   ],
   templateUrl: './todo-header-create.component.html',
   styleUrl: './todo-header-create.component.scss'
@@ -43,14 +45,6 @@ export class TodoHeaderCreateComponent {
       });
 
     }
-  }
-
-  setImportance(n: number) {
-    this.taskImportance = n;
-  }
-
-  checkImportance(n: number) {
-    return n === this.taskImportance;
   }
 
   @HostListener('document:keydown.enter', ['$event'])

@@ -1,13 +1,15 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {TodoService} from "../../../service/todo.service";
 import {FormsModule} from "@angular/forms";
+import {MatTooltip, MatTooltipModule} from '@angular/material/tooltip';
 import {Todo} from "../../../interfaces/todo";
 
 @Component({
   selector: 'app-todo-status',
   standalone: true,
   imports: [
-    FormsModule
+    FormsModule,
+    MatTooltip
   ],
   templateUrl: './todo-status.component.html',
   styleUrl: './todo-status.component.scss'

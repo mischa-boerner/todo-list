@@ -4,7 +4,7 @@
       "id": "14e840fe7-6870-46a4-b756-d2271ca41fa0",
       "taskTitle": "Neues Feature implementieren",
       "taskDescription": "Implementieren Sie das neue Feature gemäß den Spezifikationen. test",
-      "isCompleted": true,
+      "isCompleted": false,
       "importance": 1
     },
     {
@@ -25,22 +25,15 @@
       "id": "f9258afd-2fdd-4794-aa70-17d6148d8a7c",
       "taskTitle": "Test 2",
       "taskDescription": "",
-      "isCompleted": true,
-      "importance": 1
+      "isCompleted": false,
+      "importance": 0
     },
     {
-      "id": "0aeba18b-0b37-41a5-9e42-7ce2a8489030",
-      "taskTitle": "test",
+      "id": "362c7dc8-9769-49fc-9a4d-d4b72804dfb3",
+      "taskTitle": "dsad",
       "taskDescription": "",
       "isCompleted": false,
       "importance": 2
-    },
-    {
-      "id": "fdfbcb02-a2df-4c87-8ea2-59c92b270ed5",
-      "taskTitle": "test",
-      "taskDescription": "",
-      "isCompleted": true,
-      "importance": 1
     }
   ]
 }

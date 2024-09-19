@@ -1,13 +1,12 @@
 <div class="create-container">
   <div class="button-container">
-    <div class="importance-button-container">
-      <button (click)="setImportance(0)" [ngClass]="{'normal': checkImportance(0)}">Normal</button>
-      <button (click)="setImportance(1)" [ngClass]="{'important': checkImportance(1)}">Important</button>
-      <button (click)="setImportance(2)" [ngClass]="{'urgent': checkImportance(2)}">Urgent</button>
-    </div>
-    <div class="create-button-container">
-      <button (click)="addTodo()">Create</button>
-    </div>
+    <button (click)="addTodo()">Create</button>
+    <select [(ngModel)]="taskImportance" [ngClass]="{'normal': taskImportance === 0, 'important': taskImportance === 1, 'urgent': taskImportance === 2}"
+            [matTooltip]="'Select Importance for new Todo'">
+      <option value="0" (click)="taskImportance = 0">Normal</option>
+      <option value="1" (click)="taskImportance = 1">Important</option>
+      <option value="2" (click)="taskImportance = 2">Urgent</option>
+    </select>
   </div>
 
   <div class="input-container">

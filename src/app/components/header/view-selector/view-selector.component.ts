@@ -1,13 +1,15 @@
 import {Component, OnInit} from '@angular/core';
 import {NavigationEnd, Router, RouterLink} from "@angular/router";
 import {NgClass} from "@angular/common";
+import {MatTooltip} from "@angular/material/tooltip";
 
 @Component({
   selector: 'app-view-selector',
   standalone: true,
   imports: [
     RouterLink,
-    NgClass
+    NgClass,
+    MatTooltip
   ],
   templateUrl: './view-selector.component.html',
   styleUrl: './view-selector.component.scss'

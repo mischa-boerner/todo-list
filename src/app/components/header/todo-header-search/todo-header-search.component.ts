@@ -2,12 +2,14 @@ import {Component, ElementRef, EventEmitter, HostListener, inject, Output, ViewC
 import {Todo} from "../../../interfaces/todo";
 import {FormsModule} from "@angular/forms";
 import {TodoService} from "../../../service/todo.service";
+import {MatTooltip} from "@angular/material/tooltip";
 
 @Component({
   selector: 'app-todo-header-search',
   standalone: true,
   imports: [
-    FormsModule
+    FormsModule,
+    MatTooltip
   ],
   templateUrl: './todo-header-search.component.html',
   styleUrl: './todo-header-search.component.scss'

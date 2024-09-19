@@ -2,6 +2,6 @@
   <input #searchInput [(ngModel)]="searchInputText" type="text" placeholder="Search existing Todos">
   <button (click)="search()">Search</button>
   <label for="includeDesc">
-    <input type="checkbox" id="includeDesc" [(ngModel)]="includeDesc">Include Description
+    <input type="checkbox" id="includeDesc" [(ngModel)]="includeDesc" [matTooltip]="'Toggle Include Description'">Include Description
   </label>
 </div>

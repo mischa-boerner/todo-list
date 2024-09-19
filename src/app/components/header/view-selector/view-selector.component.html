@@ -1,6 +1,8 @@
 <nav>
-  <a [routerLink]="'list'" style="margin-left: 0.2rem; border-top-right-radius: 0; border-bottom-right-radius: 0" (click)="setView(0)" [ngClass]="{'highlight': isViewActive('list')}">
+  <a [routerLink]="'list'" style="margin-left: 0.2rem" (click)="setView(0)" [ngClass]="{'highlight': isViewActive('list')}"
+     [matTooltip]="'List View'">
     <i class="fas fa-list"></i></a>
-  <a [routerLink]="'card'" style="margin-right: 0.2rem; border-top-left-radius: 0; border-bottom-left-radius: 0" (click)="setView(1)" [ngClass]="{'highlight': isViewActive('card')}">
+  <a [routerLink]="'card'" style="margin-right: 0.2rem" (click)="setView(1)" [ngClass]="{'highlight': isViewActive('card')}"
+     [matTooltip]="'Card View'">
     <i class="fas fa-th-large"></i></a>
 </nav>
