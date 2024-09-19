@@ -44,7 +44,7 @@
       "id": "9",
       "taskTitle": "Update dependencies",
       "taskDescription": "Update all project dependencies to their latest versions.",
-      "isCompleted": false,
+      "isCompleted": true,
       "importance": 1,
       "isSelected": false
     },
@@ -60,7 +60,7 @@
       "id": "12",
       "taskTitle": "Prepare presentation",
       "taskDescription": "Prepare a presentation for the quarterly review meeting.",
-      "isCompleted": false,
+      "isCompleted": true,
       "importance": 1,
       "isSelected": false
     },
@@ -140,7 +140,7 @@
       "id": "25",
       "taskTitle": "Write blog post",
       "taskDescription": "Write a blog post about the latest product update.",
-      "isCompleted": true,
+      "isCompleted": false,
       "importance": 0,
       "isSelected": false
     },
@@ -172,7 +172,7 @@
       "id": "29",
       "taskTitle": "Create user personas",
       "taskDescription": "Develop user personas to better understand our audience.",
-      "isCompleted": true,
+      "isCompleted": false,
       "importance": 0,
       "isSelected": false
     },
@@ -252,7 +252,7 @@
       "id": "40",
       "taskTitle": "Create user feedback form",
       "taskDescription": "Develop a form to collect user feedback.",
-      "isCompleted": false,
+      "isCompleted": true,
       "importance": 0,
       "isSelected": false
     },

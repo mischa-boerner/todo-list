@@ -55,12 +55,27 @@ export class CardSeperatorComponent {
   }
 
   completeAllSelected() {
-    this.todos.filter(todo => todo.isSelected).forEach(todo => {
+    const completeRequests = this.todos.filter(todo => todo.isSelected).map(todo => {
       todo.isCompleted = true;
       todo.isSelected = false;
-      this.todoService.putTodos(todo).subscribe();
+      return this.todoService.putTodos(todo);
     });
-    this.update.emit();
+
+    forkJoin(completeRequests).subscribe(() => {
+      this.update.emit();
+    });
+  }
+
+  uncompleteAllSelected() {
+    const uncompleteRequests = this.todos.filter(todo => todo.isSelected).map(todo => {
+      todo.isCompleted = false;
+      todo.isSelected = false;
+      return this.todoService.putTodos(todo);
+    });
+
+    forkJoin(uncompleteRequests).subscribe(() => {
+      this.update.emit();
+    });
   }
 
   moveSelectedUp() {
@@ -88,13 +103,6 @@ export class CardSeperatorComponent {
   deleteAllSelected() {
     const selectedTodos = this.todos.filter(todo => todo.isSelected);
     const deleteRequests = selectedTodos.map(todo => this.todoService.deleteTodo(todo.id));
-    forkJoin(deleteRequests).subscribe(() => {
-      this.update.emit();
-    });
-  }
-
-  deleteAll() {
-    const deleteRequests = this.todos.map(todo => this.todoService.deleteTodo(todo.id));
     forkJoin(deleteRequests).subscribe(() => {
       this.update.emit();
     });
