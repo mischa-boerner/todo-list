@@ -4,7 +4,7 @@
       "id": "14e840fe7-6870-46a4-b756-d2271ca41fa0",
       "taskTitle": "Neues Feature implementieren",
       "taskDescription": "Implementieren Sie das neue Feature gemäß den Spezifikationen. test",
-      "isCompleted": false,
+      "isCompleted": true,
       "importance": 1
     },
     {
@@ -12,13 +12,6 @@
       "taskTitle": "Sicherheitsrichtlinien aktualisieren",
       "taskDescription": "Aktualisieren Sie die Sicherheitsrichtlinien des Unternehmens.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndsadasd\n",
       "isCompleted": false,
-      "importance": 1
-    },
-    {
-      "id": "49e840fe7-6870-46a4-b756-d2271ca41fa0",
-      "taskTitle": "Kundensupport-Feedback einholen",
-      "taskDescription": "Holen Sie Feedback vom Kundensupport-Team ein und analysieren Sie es.",
-      "isCompleted": true,
       "importance": 1
     },
     {
@@ -32,21 +25,21 @@
       "id": "f9258afd-2fdd-4794-aa70-17d6148d8a7c",
       "taskTitle": "Test 2",
       "taskDescription": "",
-      "isCompleted": false,
+      "isCompleted": true,
       "importance": 1
     },
     {
       "id": "0aeba18b-0b37-41a5-9e42-7ce2a8489030",
       "taskTitle": "test",
       "taskDescription": "",
-      "isCompleted": true,
+      "isCompleted": false,
       "importance": 2
     },
     {
       "id": "fdfbcb02-a2df-4c87-8ea2-59c92b270ed5",
       "taskTitle": "test",
       "taskDescription": "",
-      "isCompleted": false,
+      "isCompleted": true,
       "importance": 1
     }
   ]

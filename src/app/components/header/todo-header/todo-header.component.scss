@@ -1,3 +1,7 @@
+h1 {
+  margin-bottom: 0;
+}
+
 .header-container {
   display: flex;
   flex-flow: column nowrap;
@@ -11,4 +15,13 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+}
+
+.info-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  margin: 0 auto 0.25rem;
 }

@@ -1,0 +1,23 @@
+p {
+  margin: 0.2rem 0 0.2rem 0 ;
+  padding: 2px;
+  color: white;
+  flex-grow: 1;
+  text-align: center;
+  border-radius: 1rem;
+  cursor: default;
+  user-select: none;
+}
+
+.status-pill {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 10rem;
+  overflow: clip;
+  background-color: whitesmoke;
+  border: solid lightgrey;
+  border-radius: 20px;
+  gap: 0.3rem;
+}

@@ -1,0 +1,32 @@
+nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 4rem;
+  overflow: clip;
+  background-color: whitesmoke;
+  border: solid lightgrey;
+  border-radius: 30px;
+  gap: 0.3rem;
+
+  a {
+    margin: 0.2rem 0 0.2rem 0 ;
+    padding: 2px;
+    flex-grow: 1;
+    text-align: center;
+    align-items: center;
+    border-radius: 1rem;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.15s;
+  }
+
+  a:hover {
+    background-color: lightgrey;
+  }
+
+  i {
+    color: black; /* Set icon color to black */
+  }
+}

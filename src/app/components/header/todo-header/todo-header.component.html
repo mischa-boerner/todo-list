@@ -1,5 +1,9 @@
 <div class="header-container">
   <h1>To-Do</h1>
+  <div class="info-container">
+    <app-view-selector></app-view-selector>
+    <app-todo-status></app-todo-status>
+  </div>
   <div>
     <app-todo-header-search (searchTodo)="onSearchTodo($event)"></app-todo-header-search>
     <app-todo-header-create (createTodo)="onCreateTodo($event)"></app-todo-header-create>
