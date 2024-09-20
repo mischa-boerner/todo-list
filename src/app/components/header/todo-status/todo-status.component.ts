@@ -3,21 +3,23 @@ import {TodoService} from "../../../service/todo.service";
 import {FormsModule} from "@angular/forms";
 import {MatTooltip, MatTooltipModule} from '@angular/material/tooltip';
 import {Todo} from "../../../interfaces/todo";
+import {LoadingComponent} from "../../loading/loading.component";
 
 @Component({
   selector: 'app-todo-status',
   standalone: true,
   imports: [
     FormsModule,
-    MatTooltip
+    MatTooltip,
+    LoadingComponent
   ],
   templateUrl: './todo-status.component.html',
   styleUrl: './todo-status.component.scss'
 })
 export class TodoStatusComponent implements OnInit{
-  private todoService: TodoService = inject(TodoService);
+  @Output() update = new EventEmitter<void>();
 
-  @Output() scroll = new EventEmitter<string>();
+  private todoService: TodoService = inject(TodoService);
 
   totalTodos: number = 0;
   urgentTodos: number = 0;
@@ -42,8 +44,8 @@ export class TodoStatusComponent implements OnInit{
     });
   }
 
-  doScroll(str: string) {
-    this.scroll.emit('string');
+  onUpdate() {
+    this.getTodoAmount();
+    this.update.emit();
   }
-
 }

@@ -41,6 +41,7 @@ $todo-list-theme: mat.define-theme((
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 17%;
 }
 
 input[type="text"], button, textarea, select {
@@ -105,6 +106,12 @@ button:hover, select:hover{
 .complete {
   background-color: limegreen;
   border-color: limegreen;
+  color: white;
+}
+
+.search {
+  background-color: dodgerblue;
+  border-color: dodgerblue;
   color: white;
 }
 

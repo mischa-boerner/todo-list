@@ -3,11 +3,11 @@
   <hr>
   <button *ngIf="checkSelected()" (click)="unselectAll()">Unselect All</button>
   <button *ngIf="getSelectedLength() != todos.length" (click)="selectAll()">Select All</button>
-  <button *ngIf="importance != 0 && importance != -1 && checkSelected()" (click)="moveSelectedDown()">Move Selected Down</button>
-  <button *ngIf="importance != 2 && importance != -1 && checkSelected()" (click)="moveSelectedUp()">Move Selected Up</button>
+  <button *ngIf="importance != 0 && importance != -1 && importance != -2 && checkSelected()" (click)="moveSelectedDown()">Move Selected Down</button>
+  <button *ngIf="importance != 2 && importance != -1 && importance != -2 && checkSelected()" (click)="moveSelectedUp()">Move Selected Up</button>
   <button *ngIf="checkSelected() && importance != -1" (click)="completeAllSelected()">Complete Selected</button>
   <button *ngIf="checkSelected() && importance === -1" (click)="uncompleteAllSelected()">Uncomplete Selected</button>
   <button *ngIf="importance === -1 && checkSelected()" (click)="deleteAllSelected()">Delete Selected</button>
-  <button *ngIf="todos.length > 4 && !showAll" (click)="toggleShowAll(true)">Show All</button>
+  <button *ngIf="todos.length > 4 && !showAll && isCardView()" (click)="toggleShowAll(true)">Show All</button>
   <button *ngIf="showAll" (click)="toggleShowAll(false)">Show Less</button>
 </div>

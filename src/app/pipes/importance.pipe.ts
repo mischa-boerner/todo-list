@@ -25,7 +25,7 @@ export class ImportancePipe implements PipeTransform {
         break;
     }
 
-    const html = `<span><span style="color: ${color}">${prefix}</span>${todo.taskTitle}</span>`;
+    const html = `<span><span style="color:${color};">${prefix}</span>${todo.taskTitle}</span>`;
     return this.sanitizer.bypassSecurityTrustHtml(html);
   }
 }

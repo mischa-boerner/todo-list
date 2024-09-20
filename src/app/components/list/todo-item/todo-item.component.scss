@@ -3,16 +3,22 @@ input[type="checkbox"] {
   accent-color: dodgerblue;
 }
 
-span {
-  font-family: "Arial", serif;
+p {
   cursor: pointer;
   transition: 0.1s;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 28ch;
+  margin: 0;
 }
 
-span:hover {
+p:hover {
   color: dodgerblue;
 }
 
 div {
   margin-bottom: 10px;
+  display: flex;
 }
+

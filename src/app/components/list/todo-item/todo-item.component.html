@@ -1,4 +1,6 @@
 <div>
-  <input type="checkbox" [(ngModel)]="todo.isCompleted" (change)="onCheckboxChange()">
-  <span (click)="navigateToDetail(todo.id)" [innerHTML]="todo | importance"></span>
+  <input type="checkbox" [(ngModel)]="todo.isSelected" (change)="onCheckboxChange()">
+  <p (click)="navigateToDetail(todo.id)" [innerHtml]="todo | importance"
+     [matTooltip]="(todo.taskTitle.length > 28) ? todo.taskTitle : ''">
+  </p>
 </div>

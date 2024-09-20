@@ -2,362 +2,418 @@
   "todos": [
     {
       "id": "1",
-      "taskTitle": "Update project documentation",
-      "taskDescription": "Ensure all project documentation is up to date and accurate.",
+      "taskTitle": "Einkaufen gehen",
+      "taskDescription": "Milch, Brot, Eier kaufen",
       "isCompleted": true,
-      "importance": 2,
+      "importance": 1,
       "isSelected": false
     },
     {
       "id": "2",
-      "taskTitle": "Fix login bug",
-      "taskDescription": "Resolve the issue causing login failures for some users.",
+      "taskTitle": "Hausaufgaben machen",
+      "taskDescription": "Mathe und Englisch Hausaufgaben erledigen",
       "isCompleted": true,
       "importance": 2,
       "isSelected": false
     },
     {
       "id": "3",
-      "taskTitle": "Design new homepage layout",
-      "taskDescription": "Create a new layout for the homepage to improve user experience.",
-      "isCompleted": false,
+      "taskTitle": "Auto waschen",
+      "taskDescription": "Auto innen und außen reinigen",
+      "isCompleted": true,
+      "importance": 0,
+      "isSelected": false
+    },
+    {
+      "id": "4",
+      "taskTitle": "Arzttermin vereinbaren",
+      "taskDescription": "Termin beim Zahnarzt ausmachen",
+      "isCompleted": true,
       "importance": 1,
       "isSelected": false
     },
     {
-      "id": "6",
-      "taskTitle": "Implement dark mode",
-      "taskDescription": "Add a dark mode option to the application settings.",
+      "id": "5",
+      "taskTitle": "Geburtstagsgeschenk kaufen",
+      "taskDescription": "Geschenk für Sarahs Geburtstag besorgen",
       "isCompleted": true,
       "importance": 2,
       "isSelected": false
     },
     {
+      "id": "6",
+      "taskTitle": "Wohnung putzen",
+      "taskDescription": "Wohnzimmer und Küche reinigen",
+      "isCompleted": true,
+      "importance": 0,
+      "isSelected": false
+    },
+    {
+      "id": "7",
+      "taskTitle": "Buch lesen",
+      "taskDescription": "Kapitel 5 und 6 von 'Der Alchemist' lesen",
+      "isCompleted": true,
+      "importance": 1,
+      "isSelected": false
+    },
+    {
       "id": "8",
-      "taskTitle": "Refactor authentication module",
-      "taskDescription": "Refactor the authentication module to improve code readability.",
-      "isCompleted": false,
+      "taskTitle": "Wäsche waschen",
+      "taskDescription": "Weiße und bunte Wäsche waschen",
+      "isCompleted": true,
       "importance": 2,
       "isSelected": false
     },
     {
       "id": "9",
-      "taskTitle": "Update dependencies",
-      "taskDescription": "Update all project dependencies to their latest versions.",
+      "taskTitle": "Projektarbeit abschließen und einreichen",
+      "taskDescription": "Letzte Änderungen am Projektbericht vornehmen",
       "isCompleted": true,
+      "importance": 0,
+      "isSelected": false
+    },
+    {
+      "id": "10",
+      "taskTitle": "Gartenarbeit",
+      "taskDescription": "Rasen mähen und Blumen gießen",
+      "isCompleted": false,
       "importance": 1,
       "isSelected": false
     },
     {
       "id": "11",
-      "taskTitle": "Fix CSS issues",
-      "taskDescription": "Resolve various CSS issues reported by the QA team.",
-      "isCompleted": true,
+      "taskTitle": "Rechnung bezahlen",
+      "taskDescription": "Stromrechnung für diesen Monat bezahlen",
+      "isCompleted": false,
       "importance": 2,
       "isSelected": false
     },
     {
       "id": "12",
-      "taskTitle": "Prepare presentation",
-      "taskDescription": "Prepare a presentation for the quarterly review meeting.",
-      "isCompleted": true,
+      "taskTitle": "E-Mails beantworten",
+      "taskDescription": "Auf wichtige E-Mails antworten",
+      "isCompleted": false,
+      "importance": 0,
+      "isSelected": false
+    },
+    {
+      "id": "13",
+      "taskTitle": "Fitnessstudio besuchen",
+      "taskDescription": "Trainingseinheit im Fitnessstudio absolvieren",
+      "isCompleted": false,
       "importance": 1,
       "isSelected": false
     },
     {
       "id": "14",
-      "taskTitle": "Set up CI/CD pipeline",
-      "taskDescription": "Configure the CI/CD pipeline for automated deployments.",
-      "isCompleted": true,
+      "taskTitle": "Reise planen",
+      "taskDescription": "Urlaub für nächsten Monat planen",
+      "isCompleted": false,
       "importance": 2,
       "isSelected": false
     },
     {
+      "id": "15",
+      "taskTitle": "Kochen",
+      "taskDescription": "Abendessen für die Familie zubereiten",
+      "isCompleted": true,
+      "importance": 0,
+      "isSelected": false
+    },
+    {
       "id": "16",
-      "taskTitle": "Update user guide",
-      "taskDescription": "Update the user guide to include the latest features.",
-      "isCompleted": false,
+      "taskTitle": "Freunde treffen",
+      "taskDescription": "Mit Freunden im Park treffen",
+      "isCompleted": true,
       "importance": 1,
       "isSelected": false
     },
     {
       "id": "17",
-      "taskTitle": "Fix security vulnerabilities",
-      "taskDescription": "Address the security vulnerabilities identified in the audit.",
+      "taskTitle": "Filmabend",
+      "taskDescription": "Filmabend mit der Familie organisieren",
       "isCompleted": true,
-      "importance": 1,
-      "isSelected": false
-    },
-    {
-      "id": "18",
-      "taskTitle": "Design new logo",
-      "taskDescription": "Create a new logo for the rebranding effort.",
-      "isCompleted": false,
-      "importance": 1,
+      "importance": 2,
       "isSelected": false
     },
     {
       "id": "19",
-      "taskTitle": "Implement search functionality",
-      "taskDescription": "Add search functionality to the application.",
+      "taskTitle": "Steuererklärung machen",
+      "taskDescription": "Steuererklärung für das letzte Jahr vorbereiten",
       "isCompleted": false,
       "importance": 1,
       "isSelected": false
     },
     {
       "id": "20",
-      "taskTitle": "Conduct performance testing",
-      "taskDescription": "Perform load and stress testing.",
+      "taskTitle": "Spaziergang machen",
+      "taskDescription": "Spaziergang im Park machen",
       "isCompleted": false,
-      "importance": 0,
+      "importance": 2,
       "isSelected": false
     },
     {
-      "id": "21",
-      "taskTitle": "Update privacy policy",
-      "taskDescription": "Revise the privacy policy to comply with new regulations.",
+      "id": "22",
+      "taskTitle": "Werkstatt besuchen",
+      "taskDescription": "Auto zur Inspektion in die Werkstatt bringen",
       "isCompleted": false,
       "importance": 1,
       "isSelected": false
     },
     {
       "id": "23",
-      "taskTitle": "Create onboarding process",
-      "taskDescription": "Develop an onboarding process for new employees.",
+      "taskTitle": "Bastelprojekt",
+      "taskDescription": "DIY-Projekt für das Wohnzimmer umsetzen",
       "isCompleted": false,
-      "importance": 1,
+      "importance": 2,
       "isSelected": false
     },
     {
       "id": "24",
-      "taskTitle": "Implement caching",
-      "taskDescription": "Add caching to improve application performance.",
-      "isCompleted": false,
-      "importance": 1,
-      "isSelected": false
-    },
-    {
-      "id": "25",
-      "taskTitle": "Write blog post",
-      "taskDescription": "Write a blog post about the latest product update.",
+      "taskTitle": "Online-Kurs absolvieren",
+      "taskDescription": "Kapitel 3 und 4 des Online-Kurses abschließen",
       "isCompleted": false,
       "importance": 0,
       "isSelected": false
     },
     {
+      "id": "25",
+      "taskTitle": "Bank besuchen",
+      "taskDescription": "Termin bei der Bank wahrnehmen",
+      "isCompleted": false,
+      "importance": 1,
+      "isSelected": false
+    },
+    {
       "id": "26",
-      "taskTitle": "Fix email notifications",
-      "taskDescription": "Resolve issues with email notifications not being sent.",
-      "isCompleted": true,
+      "taskTitle": "Zimmer umgestalten",
+      "taskDescription": "Möbel im Schlafzimmer umstellen",
+      "isCompleted": false,
       "importance": 2,
       "isSelected": false
     },
     {
       "id": "27",
-      "taskTitle": "Update API documentation",
-      "taskDescription": "Ensure the API documentation is up to date.",
-      "isCompleted": false,
-      "importance": 1,
-      "isSelected": false
-    },
-    {
-      "id": "28",
-      "taskTitle": "Conduct security audit",
-      "taskDescription": "Perform a security audit on the application.",
-      "isCompleted": true,
-      "importance": 2,
-      "isSelected": false
-    },
-    {
-      "id": "29",
-      "taskTitle": "Create user personas",
-      "taskDescription": "Develop user personas to better understand our audience.",
+      "taskTitle": "Fahrrad reparieren",
+      "taskDescription": "Reifen am Fahrrad flicken",
       "isCompleted": false,
       "importance": 0,
       "isSelected": false
     },
     {
-      "id": "30",
-      "taskTitle": "Fix pagination issues",
-      "taskDescription": "Resolve issues with pagination on the product listing page.",
+      "id": "28",
+      "taskTitle": "Bewerbung schreiben",
+      "taskDescription": "Bewerbung für die neue Stelle vorbereiten",
       "isCompleted": false,
       "importance": 1,
       "isSelected": false
     },
     {
+      "id": "29",
+      "taskTitle": "Konzert besuchen",
+      "taskDescription": "Tickets für das Konzert am Wochenende kaufen",
+      "isCompleted": false,
+      "importance": 2,
+      "isSelected": false
+    },
+    {
+      "id": "30",
+      "taskTitle": "Blumen pflanzen",
+      "taskDescription": "Neue Blumen im Garten pflanzen",
+      "isCompleted": false,
+      "importance": 0,
+      "isSelected": false
+    },
+    {
       "id": "31",
-      "taskTitle": "Implement two-factor authentication",
-      "taskDescription": "Add two-factor authentication to enhance security.",
+      "taskTitle": "Buchhaltung erledigen",
+      "taskDescription": "Buchhaltung für das letzte Quartal abschließen",
       "isCompleted": false,
       "importance": 1,
       "isSelected": false
     },
     {
       "id": "32",
-      "taskTitle": "Update terms of service",
-      "taskDescription": "Revise the terms of service to reflect recent changes.",
+      "taskTitle": "Kleiderschrank ausmisten",
+      "taskDescription": "Alte Kleidung aussortieren und spenden",
       "isCompleted": false,
-      "importance": 1,
+      "importance": 2,
       "isSelected": false
     },
     {
       "id": "33",
-      "taskTitle": "Fix mobile responsiveness",
-      "taskDescription": "Ensure the website is fully responsive on mobile devices.",
-      "isCompleted": true,
-      "importance": 2,
+      "taskTitle": "Laptop aufräumen",
+      "taskDescription": "Unnötige Dateien vom Laptop löschen",
+      "isCompleted": false,
+      "importance": 0,
       "isSelected": false
     },
     {
-      "id": "35",
-      "taskTitle": "Implement feature flags",
-      "taskDescription": "Add feature flags to enable/disable features easily.",
+      "id": "34",
+      "taskTitle": "Rezept ausprobieren",
+      "taskDescription": "Neues Rezept für das Abendessen ausprobieren",
       "isCompleted": false,
       "importance": 1,
       "isSelected": false
     },
     {
-      "id": "36",
-      "taskTitle": "Fix image upload issues",
-      "taskDescription": "Resolve issues with image uploads failing.",
-      "isCompleted": true,
+      "id": "35",
+      "taskTitle": "Freizeitpark besuchen",
+      "taskDescription": "Tagesausflug in den Freizeitpark planen",
+      "isCompleted": false,
       "importance": 2,
       "isSelected": false
     },
     {
+      "id": "36",
+      "taskTitle": "Fenster putzen",
+      "taskDescription": "Alle Fenster im Haus reinigen",
+      "isCompleted": false,
+      "importance": 0,
+      "isSelected": false
+    },
+    {
       "id": "37",
-      "taskTitle": "Update landing page",
-      "taskDescription": "Revamp the landing page to improve conversion rates.",
+      "taskTitle": "Steckbrief erstellen",
+      "taskDescription": "Steckbrief für das neue Teammitglied erstellen",
       "isCompleted": false,
       "importance": 1,
       "isSelected": false
     },
     {
       "id": "38",
-      "taskTitle": "Conduct A/B testing",
-      "taskDescription": "Perform A/B testing to determine the best design.",
-      "isCompleted": false,
-      "importance": 0,
+      "taskTitle": "Bilder aufhängen",
+      "taskDescription": "Neue Bilder im Wohnzimmer aufhängen",
+      "isCompleted": true,
+      "importance": 2,
       "isSelected": false
     },
     {
       "id": "39",
-      "taskTitle": "Fix search indexing",
-      "taskDescription": "Resolve issues with search indexing not working correctly.",
-      "isCompleted": true,
-      "importance": 2,
+      "taskTitle": "Kaffee trinken",
+      "taskDescription": "Mit einem Freund auf einen Kaffee treffen",
+      "isCompleted": false,
+      "importance": 0,
       "isSelected": false
     },
     {
       "id": "40",
-      "taskTitle": "Create user feedback form",
-      "taskDescription": "Develop a form to collect user feedback.",
-      "isCompleted": true,
-      "importance": 0,
+      "taskTitle": "Webseite aktualisieren",
+      "taskDescription": "Inhalte auf der Firmenwebseite aktualisieren",
+      "isCompleted": false,
+      "importance": 1,
       "isSelected": false
     },
     {
       "id": "41",
-      "taskTitle": "Implement push notifications",
-      "taskDescription": "Add push notifications to the mobile app.",
-      "isCompleted": false,
-      "importance": 1,
+      "taskTitle": "Schwimmen gehen",
+      "taskDescription": "Nachmittags im Schwimmbad verbringen",
+      "isCompleted": true,
+      "importance": 2,
       "isSelected": false
     },
     {
       "id": "42",
-      "taskTitle": "Fix broken images",
-      "taskDescription": "Identify and fix broken images on the website.",
-      "isCompleted": true,
-      "importance": 2,
-      "isSelected": false
-    },
-    {
-      "id": "43",
-      "taskTitle": "Update contact information",
-      "taskDescription": "Ensure all contact information is up to date.",
-      "isCompleted": true,
+      "taskTitle": "Batterien wechseln",
+      "taskDescription": "Batterien in den Fernbedienungen austauschen",
+      "isCompleted": false,
       "importance": 0,
       "isSelected": false
     },
     {
-      "id": "44",
-      "taskTitle": "Create social media strategy",
-      "taskDescription": "Develop a strategy for social media engagement.",
+      "id": "43",
+      "taskTitle": "Kochkurs besuchen",
+      "taskDescription": "An einem Kochkurs teilnehmen",
       "isCompleted": false,
       "importance": 1,
       "isSelected": false
     },
     {
-      "id": "45",
-      "taskTitle": "Fix form validation issues",
-      "taskDescription": "Resolve issues with form validation not working correctly.",
+      "id": "44",
+      "taskTitle": "Schreibtisch organisieren",
+      "taskDescription": "Schreibtisch im Büro neu organisieren",
       "isCompleted": true,
       "importance": 2,
       "isSelected": false
     },
     {
+      "id": "45",
+      "taskTitle": "Fahrradtour machen",
+      "taskDescription": "Fahrradtour durch die Stadt planen",
+      "isCompleted": false,
+      "importance": 0,
+      "isSelected": false
+    },
+    {
       "id": "46",
-      "taskTitle": "Update color scheme",
-      "taskDescription": "Revise the color scheme to improve accessibility.",
+      "taskTitle": "Buchhandlung besuchen",
+      "taskDescription": "Neues Buch in der Buchhandlung kaufen",
       "isCompleted": false,
       "importance": 1,
       "isSelected": false
     },
     {
       "id": "47",
-      "taskTitle": "Conduct usability testing",
-      "taskDescription": "Perform usability testing to identify user pain points.",
-      "isCompleted": false,
-      "importance": 0,
-      "isSelected": false
-    },
-    {
-      "id": "48",
-      "taskTitle": "Fix API rate limiting",
-      "taskDescription": "Resolve issues with API rate limiting causing errors.",
+      "taskTitle": "Kinoabend",
+      "taskDescription": "Film im Kino ansehen",
       "isCompleted": true,
       "importance": 2,
       "isSelected": false
     },
     {
+      "id": "48",
+      "taskTitle": "Schuhe putzen",
+      "taskDescription": "Alle Schuhe im Schrank putzen",
+      "isCompleted": false,
+      "importance": 0,
+      "isSelected": false
+    },
+    {
       "id": "49",
-      "taskTitle": "Create style guide",
-      "taskDescription": "Develop a style guide for consistent design.",
+      "taskTitle": "Gartenmöbel reinigen",
+      "taskDescription": "Gartenmöbel für den Sommer vorbereiten",
       "isCompleted": false,
       "importance": 1,
       "isSelected": false
     },
     {
       "id": "50",
-      "taskTitle": "Fix session timeout issues",
-      "taskDescription": "Resolve issues with session timeouts occurring too frequently.",
-      "isCompleted": false,
-      "importance": 1,
+      "taskTitle": "Musik hören",
+      "taskDescription": "Neue Playlist erstellen und Musik hören",
+      "isCompleted": true,
+      "importance": 2,
       "isSelected": false
     },
     {
-      "id": "81f53515-7c79-45a1-8488-305717d82c61",
-      "taskTitle": "test",
-      "taskDescription": "",
-      "isCompleted": false,
-      "importance": 1,
-      "isSelected": false
-    },
-    {
-      "id": "ee334fe9-5437-495e-acbc-5916645d74b7",
-      "taskTitle": "test 1",
-      "taskDescription": "",
+      "id": "51",
+      "taskTitle": "Kaffeemaschine entkalken",
+      "taskDescription": "Kaffeemaschine gründlich entkalken",
       "isCompleted": false,
       "importance": 0,
       "isSelected": false
     },
     {
-      "id": "6eeef816-053d-4dff-8357-38b570dd241c",
-      "taskTitle": "test 2",
-      "taskDescription": "",
+      "id": "52",
+      "taskTitle": "Blumen gießen",
+      "taskDescription": "Alle Zimmerpflanzen gießen",
       "isCompleted": false,
       "importance": 1,
+      "isSelected": false
+    },
+    {
+      "id": "53",
+      "taskTitle": "Rezeptbuch erstellen",
+      "taskDescription": "Eigene Rezepte in ein Buch schreiben",
+      "isCompleted": true,
+      "importance": 2,
+      "isSelected": false
+    },
+    {
+      "id": "54",
+      "taskTitle": "Schrank aufräumen",
+      "taskDescription": "Kleiderschrank neu organisieren",
+      "isCompleted": false,
+      "importance": 0,
       "isSelected": false
     }
   ]

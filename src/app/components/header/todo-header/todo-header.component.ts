@@ -4,16 +4,18 @@ import {TodoHeaderCreateComponent} from "../todo-header-create/todo-header-creat
 import {Todo} from "../../../interfaces/todo";
 import {TodoStatusComponent} from "../todo-status/todo-status.component";
 import {ViewSelectorComponent} from "../view-selector/view-selector.component";
+import {NgOptimizedImage} from "@angular/common";
 
 @Component({
   selector: 'app-todo-header',
   standalone: true,
-    imports: [
-        TodoHeaderSearchComponent,
-        TodoHeaderCreateComponent,
-        TodoStatusComponent,
-        ViewSelectorComponent
-    ],
+  imports: [
+    TodoHeaderSearchComponent,
+    TodoHeaderCreateComponent,
+    TodoStatusComponent,
+    ViewSelectorComponent,
+    NgOptimizedImage
+  ],
   templateUrl: './todo-header.component.html',
   styleUrl: './todo-header.component.scss'
 })
@@ -23,6 +25,7 @@ export class TodoHeaderComponent implements AfterViewInit{
 
   @Output() createTodo = new EventEmitter<void>();
   @Output() searchTodo = new EventEmitter<Todo[]>();
+  @Output() update = new EventEmitter<void>();
 
   ngAfterViewInit() {
     this.headerPlaceholder.nativeElement.style.height = `${this.getHeaderHeight()}px`;
@@ -40,15 +43,8 @@ export class TodoHeaderComponent implements AfterViewInit{
     return this.headerContainer.nativeElement.offsetHeight;
   }
 
-  scrollToSection(sectionId: string) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      const headerHeight = this.getHeaderHeight();
-      window.scrollTo({
-        top: section.offsetTop - headerHeight,
-        behavior: 'smooth'
-      });
-    }
+  onUpdate() {
+    this.update.emit();
   }
 
 }

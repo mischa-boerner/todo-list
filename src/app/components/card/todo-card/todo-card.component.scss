@@ -32,7 +32,8 @@ input:hover {
   margin-top: 10px;
   padding: 5px;
   border-radius: 20px;
-  background-color: lightgrey;
+  background-color: white;
+  box-shadow: lightgrey 0 0 1rem;
 }
 
 .importance-container,
@@ -41,7 +42,8 @@ input:hover {
 .button-container {
   padding: 5px;
   background-color: whitesmoke;
-  border-bottom: lightgrey solid 3px;
+  border-bottom: white solid 3px;
+  overflow: clip;
 }
 
 .importance-container {

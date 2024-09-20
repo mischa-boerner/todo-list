@@ -1,31 +1,63 @@
-<app-todo-header (createTodo)="loadData()" (searchTodo)="onSearchTodo($event)"></app-todo-header>
-
+<app-todo-header (createTodo)="loadData()" (searchTodo)="onSearchTodo($event)" (update)="loadData()"></app-todo-header>
 <div class="todo-container">
-  <div *ngIf="searchResult.length === 0 && completedSearchResult.length === 0">
-    <p *ngIf="todos.length === 0">Nothing to do.</p>
-    <app-todo-item [todo]="t" (isCompletedChange)="updateTodoItem(t, $event)" *ngFor="let t of todos; trackBy: trackById"></app-todo-item>
+  <p *ngIf="todos.length === 0">No Todos</p>
+
+  <div class="todo-row-container" *ngIf="searchResult.length === 0 && completedSearchResult.length === 0">
+    <div class="urgent-container" *ngIf="urgentTodos.length != 0">
+      <p class="urgent">Urgent</p>
+      <app-todo-item [todo]="t" (isSelectedChange)="update()" *ngFor="let t of urgentTodos; trackBy: trackById"></app-todo-item>
+    </div>
+    <div class="important-container" *ngIf="importantTodos.length != 0">
+      <p class="important">Important</p>
+      <app-todo-item [todo]="t" (isSelectedChange)="update()" *ngFor="let t of importantTodos; trackBy: trackById"></app-todo-item>
+    </div>
+    <div class="normal-container" *ngIf="normalTodos.length != 0">
+      <p class="normal">Normal</p>
+      <app-todo-item [todo]="t" (isSelectedChange)="update()" *ngFor="let t of normalTodos; trackBy: trackById"></app-todo-item>
+    </div>
   </div>
-  <div *ngIf="searchResult.length > 0 ||completedSearchResult.length > 0">
+  <app-card-seperator *ngIf="searchResult.length === 0 && completedSearchResult.length === 0"
+    [todos]="todos"
+    [importanceLabel]="'Uncompleted'"
+    [importance]="-2"
+    [showAll]="false"
+    (update)="loadData()">
+  </app-card-seperator>
+
+  <div class="search-container" *ngIf="searchResult.length > 0 || completedSearchResult.length > 0">
+    <p class="search">Uncomplete</p>
     <p *ngIf="searchResult.length === 0">No Todos found.</p>
-    <app-todo-item [todo]="t" (isCompletedChange)="updateTodoItem(t, $event)" *ngFor="let t of searchResult; trackBy: trackById"></app-todo-item>
+    <app-todo-item [todo]="t" (isSelectedChange)="update()" *ngFor="let t of searchResult; trackBy: trackById"></app-todo-item>
   </div>
 
+  <div class="completed-container">
+    <p class="complete">Completed</p>
+    <p *ngIf="completedTodos.length === 0">No completed Todos</p>
+    <div class="completed-row-container" *ngIf="searchResult.length === 0 && completedSearchResult.length === 0">
+      <div class="urgent-container">
+        <app-todo-item [todo]="t" (isSelectedChange)="update()" *ngFor="let t of completedUrgentTodos; trackBy: trackById"></app-todo-item>
+      </div>
 
-  <div class="completed-header">
-    <hr>
-    <button (click)="undoDelete()" *ngIf="deletedTodos.length != 0 && showCompleted">Undo Delete</button>
-    <button class="delete-completed" (click)="deleteCompletedTodos()" *ngIf="completedTodos.length != 0 && showCompleted">Delete Completed</button>
-    <button type="button" (click)="showCompletedTasks()">{{ showCompleted ? "Hide" : "Show" }} Completed</button>
-  </div>
+      <div class="important-container">
+        <app-todo-item [todo]="t" (isSelectedChange)="update()" *ngFor="let t of completedImportantTodos; trackBy: trackById"></app-todo-item>
+      </div>
 
-  <div *ngIf="showCompleted">
-    <div *ngIf="searchResult.length === 0 && completedSearchResult.length === 0">
-      <p *ngIf="completedTodos.length === 0">No completed Todos</p>
-      <app-todo-item [todo]="t" (isCompletedChange)="updateTodoItem(t, $event)" *ngFor="let t of completedTodos; trackBy: trackById"></app-todo-item>
+      <div class="normal-container">
+        <app-todo-item [todo]="t" (isSelectedChange)="update()" *ngFor="let t of completedNormalTodos; trackBy: trackById"></app-todo-item>
+      </div>
     </div>
-    <div *ngIf="searchResult.length > 0 ||completedSearchResult.length > 0">
+
+    <div *ngIf="searchResult.length > 0 || completedSearchResult.length > 0">
       <p *ngIf="completedSearchResult.length === 0">No completed Todos found.</p>
-      <app-todo-item [todo]="t" (isCompletedChange)="updateTodoItem(t, $event)" *ngFor="let t of completedSearchResult; trackBy: trackById"></app-todo-item>
+      <app-todo-item [todo]="t" (isSelectedChange)="update()" *ngFor="let t of completedSearchResult; trackBy: trackById"></app-todo-item>
     </div>
   </div>
+  <app-card-seperator *ngIf="searchResult.length === 0 && completedSearchResult.length === 0"
+    [todos]="completedTodos"
+    [importanceLabel]="'Completed'"
+    [importance]="-1"
+    [showAll]="false"
+    (update)="loadData()">
+  </app-card-seperator>
+
 </div>

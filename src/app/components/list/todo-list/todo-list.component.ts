@@ -4,8 +4,11 @@ import { v4 as uuidv4 } from 'uuid';
 import {TodoService} from "../../../service/todo.service";
 import {Todo} from "../../../interfaces/todo";
 import {forkJoin} from "rxjs";
-import {NgForOf, NgIf} from "@angular/common";
+import {NgClass, NgForOf, NgIf} from "@angular/common";
 import {TodoHeaderComponent} from "../../header/todo-header/todo-header.component";
+import {LoadingComponent} from "../../loading/loading.component";
+import {ImportanceCardPipe} from "../../../pipes/importance-card.pipe";
+import {CardSeperatorComponent} from "../../card/card-seperator/card-seperator.component";
 
 @Component({
   selector: 'app-todo-list',
@@ -14,7 +17,11 @@ import {TodoHeaderComponent} from "../../header/todo-header/todo-header.componen
     TodoItemComponent,
     NgIf,
     TodoHeaderComponent,
-    NgForOf
+    NgForOf,
+    LoadingComponent,
+    ImportanceCardPipe,
+    NgClass,
+    CardSeperatorComponent
   ],
   templateUrl: './todo-list.component.html',
   styleUrl: './todo-list.component.scss'
@@ -37,6 +44,14 @@ export class TodoListComponent implements OnInit{
   todos: Todo[] = [];
   completedTodos: Todo[] = [];
 
+  urgentTodos: Todo[] = [];
+  importantTodos: Todo[] = [];
+  normalTodos: Todo[] = [];
+
+  completedUrgentTodos: Todo[] = [];
+  completedImportantTodos: Todo[] = [];
+  completedNormalTodos: Todo[] = [];
+
   searchResult: Todo[] = [];
   completedSearchResult: Todo[] = [];
 
@@ -48,15 +63,8 @@ export class TodoListComponent implements OnInit{
     this.loadData();
   }
 
-  updateTodoItem(todo: Todo, isCompleted: boolean) {
-    const item = this.todos.find(item => item.id === todo.id) || this.completedTodos.find(item => item.id === todo.id);
-    if (item) {
-      item.isCompleted = isCompleted;
-      this.todoService.putTodos(item).subscribe(updatedTodo => {
-        console.log('Todo updated:', updatedTodo);
-        this.loadData();
-      });
-    }
+  update() {
+    this.loadData()
   }
 
   loadData() {
@@ -65,6 +73,14 @@ export class TodoListComponent implements OnInit{
       // this.todos = todo.filter(todo => !todo.isCompleted);
       this.todos = todo.filter(todo => !todo.isCompleted).sort((a, b) => b.importance - a.importance);
       this.completedTodos = todo.filter(todo => todo.isCompleted).sort((a, b) => b.importance - a.importance);
+
+      this.urgentTodos = this.todos.filter(todo => todo.importance === 2);
+      this.importantTodos = this.todos.filter(todo => todo.importance === 1);
+      this.normalTodos = this.todos.filter(todo => todo.importance === 0);
+
+      this.completedUrgentTodos = this.completedTodos.filter(todo => todo.importance === 2);
+      this.completedImportantTodos = this.completedTodos.filter(todo => todo.importance === 1);
+      this.completedNormalTodos = this.completedTodos.filter(todo => todo.importance === 0);
     });
   }
 

@@ -6,6 +6,7 @@ import {NgForOf, NgIf} from "@angular/common";
 import {TodoHeaderComponent} from "../../header/todo-header/todo-header.component";
 import {forkJoin} from "rxjs";
 import {CardSeperatorComponent} from "../card-seperator/card-seperator.component";
+import {LoadingComponent} from "../../loading/loading.component";
 
 @Component({
   selector: 'app-todo-card-view',
@@ -16,7 +17,8 @@ import {CardSeperatorComponent} from "../card-seperator/card-seperator.component
     TodoHeaderComponent,
     NgIf,
     CardSeperatorComponent,
-    CardSeperatorComponent
+    CardSeperatorComponent,
+    LoadingComponent
   ],
   templateUrl: './todo-card-view.component.html',
   styleUrl: './todo-card-view.component.scss'

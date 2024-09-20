@@ -3,6 +3,7 @@ import {NgIf} from "@angular/common";
 import {TodoService} from "../../../service/todo.service";
 import {Todo} from "../../../interfaces/todo";
 import {forkJoin} from "rxjs";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-card-seperator',
@@ -22,7 +23,7 @@ export class CardSeperatorComponent {
   @Output() update = new EventEmitter<void>();
   @Output() toggleShow = new EventEmitter<boolean>();
 
-  constructor(private todoService: TodoService) {}
+  constructor(private todoService: TodoService, private router: Router) {}
 
   checkSelected(): boolean {
     return this.todos.filter(todo => todo.isSelected).length != 0;
@@ -106,5 +107,9 @@ export class CardSeperatorComponent {
     forkJoin(deleteRequests).subscribe(() => {
       this.update.emit();
     });
+  }
+
+  isCardView(): boolean {
+    return this.router.url.includes('/card');
   }
 }

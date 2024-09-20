@@ -1,8 +1,11 @@
 <div #headerContainer id="headerContainer" class="header-container">
-  <h1>To-Do</h1>
+  <div class="title-container">
+    <img ngSrc="checkbox.png" alt="checkbox" class="checkbox-icon" height="360" width="360">
+    <h1>To-Do</h1>
+  </div>
   <div class="info-container">
     <app-view-selector></app-view-selector>
-    <app-todo-status (scroll)="scrollToSection($event)"></app-todo-status>
+    <app-todo-status (update)="onUpdate()"></app-todo-status>
   </div>
   <div>
     <app-todo-header-search (searchTodo)="onSearchTodo($event)"></app-todo-header-search>

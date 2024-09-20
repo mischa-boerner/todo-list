@@ -1,5 +1,4 @@
-<app-todo-header (createTodo)="loadData()" (searchTodo)="onSearchTodo($event)"></app-todo-header>
-
+<app-todo-header (createTodo)="loadData()" (searchTodo)="onSearchTodo($event)" (update)="loadData()"></app-todo-header>
 <div class="todo-container">
   <div class="standard-todo-container" *ngIf="searchResult.length === 0">
     <div class="uncompleted-todo-container">
